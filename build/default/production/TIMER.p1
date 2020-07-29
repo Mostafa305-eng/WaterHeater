@@ -1,0 +1,1489 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F844 `(v ~T0 @X0 0 tf ]
+"55 ./Timer.h
+[; ;./Timer.h: 55: {
+[s S95 `uc 1 `uc 1 `uc 1 `uc 1 `*F844 1 ]
+[n S95 str_Timer_cfg_t Timer_CH_NO Timer_Mode Timer_Polling_Or_Interrupt Timer_Prescaler aptrf_INT ]
+"1255 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1255: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+"454
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 454: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
+"655
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 655: extern volatile unsigned char T1CON __attribute__((address(0x010)));
+[v _T1CON `Vuc ~T0 @X0 0 e@16 ]
+"1618
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1618: extern volatile unsigned char PIE1 __attribute__((address(0x08C)));
+[v _PIE1 `Vuc ~T0 @X0 0 e@140 ]
+[v F902 `(v ~T0 @X0 0 tf ]
+[v F888 `(v ~T0 @X0 0 tf ]
+"64 ./Interrupts.h
+[; ;./Interrupts.h: 64: void INT_SetCallBackFunc(uint8 u8_INT_Priority,volatile uint8 * pu8_Register,uint8 u8_MASK ,
+[v _INT_SetCallBackFunc `(v ~T0 @X0 0 ef4`uc`*Vuc`uc`*F888 ]
+"532 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 532: extern volatile unsigned char PIR1 __attribute__((address(0x00C)));
+[v _PIR1 `Vuc ~T0 @X0 0 e@12 ]
+"737
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 737: extern volatile unsigned char T2CON __attribute__((address(0x012)));
+[v _T2CON `Vuc ~T0 @X0 0 e@18 ]
+"59
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 59: extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+[v _TMR0 `Vuc ~T0 @X0 0 e@1 ]
+"641
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 641: extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+[v _TMR1L `Vuc ~T0 @X0 0 e@14 ]
+"648
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 648: extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+[v _TMR1H `Vuc ~T0 @X0 0 e@15 ]
+"730
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 730: extern volatile unsigned char TMR2 __attribute__((address(0x011)));
+[v _TMR2 `Vuc ~T0 @X0 0 e@17 ]
+"130 ./Timer.h
+[; ;./Timer.h: 130: void Timer_ClrStatus(uint8 u8_Timer_CH_NO);
+[v _Timer_ClrStatus `(v ~T0 @X0 0 ef1`uc ]
+"54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"68 TIMER.c
+[; ;TIMER.c: 68: static uint8 au8_Timer_Prescalar[]={0,0,0};
+[v _au8_Timer_Prescalar `uc ~T0 @X0 -> 3 `i s ]
+[i _au8_Timer_Prescalar
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"69
+[; ;TIMER.c: 69: static uint8 au8_Timer_Started[]={0,0,0};
+[v _au8_Timer_Started `uc ~T0 @X0 -> 3 `i s ]
+[i _au8_Timer_Started
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"70
+[; ;TIMER.c: 70: static uint8 au8_Timer0_PrescalerTable[]={0x00,0x00,0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07};
+[v _au8_Timer0_PrescalerTable `uc ~T0 @X0 -> 10 `i s ]
+[i _au8_Timer0_PrescalerTable
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 5 `i `uc
+-> -> 6 `i `uc
+-> -> 7 `i `uc
+..
+]
+"71
+[; ;TIMER.c: 71: static uint8 au8_Timer1_PrescalerTable[]={0x00,0x00,0x00,0x00,0x10,0x20,0x30,0x00,0x00,0x00};
+[v _au8_Timer1_PrescalerTable `uc ~T0 @X0 -> 10 `i s ]
+[i _au8_Timer1_PrescalerTable
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"74
+[; ;TIMER.c: 74: static uint16 au8_PrescalerValue[]={0,0,0};
+[v _au8_PrescalerValue `ui ~T0 @X0 -> 3 `i s ]
+[i _au8_PrescalerValue
+:U ..
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+-> -> 0 `i `ui
+..
+]
+"75
+[; ;TIMER.c: 75: static uint16 au8_PrescalerValueTable[]={0,1,2,4,8,16,32,64,128,256};
+[v _au8_PrescalerValueTable `ui ~T0 @X0 -> 10 `i s ]
+[i _au8_PrescalerValueTable
+:U ..
+-> -> 0 `i `ui
+-> -> 1 `i `ui
+-> -> 2 `i `ui
+-> -> 4 `i `ui
+-> -> 8 `i `ui
+-> -> 16 `i `ui
+-> -> 32 `i `ui
+-> -> 64 `i `ui
+-> -> 128 `i `ui
+-> -> 256 `i `ui
+..
+]
+"100
+[; ;TIMER.c: 100: void Timer_Init(str_Timer_cfg_t* st_Timer_cfg)
+[v _Timer_Init `(v ~T0 @X0 1 ef1`*S95 ]
+"101
+[; ;TIMER.c: 101: {
+{
+[e :U _Timer_Init ]
+"100
+[; ;TIMER.c: 100: void Timer_Init(str_Timer_cfg_t* st_Timer_cfg)
+[v _st_Timer_cfg `*S95 ~T0 @X0 1 r1 ]
+"101
+[; ;TIMER.c: 101: {
+[f ]
+"102
+[; ;TIMER.c: 102:  switch(st_Timer_cfg->Timer_CH_NO)
+[e $U 98  ]
+"103
+[; ;TIMER.c: 103:  {
+{
+"104
+[; ;TIMER.c: 104:   case (0) :
+[e :U 99 ]
+"105
+[; ;TIMER.c: 105:    switch(st_Timer_cfg->Timer_Mode)
+[e $U 101  ]
+"106
+[; ;TIMER.c: 106:    {
+{
+"107
+[; ;TIMER.c: 107:     case(0) :
+[e :U 102 ]
+"110
+[; ;TIMER.c: 110:                     (OPTION_REG)|=(0x20);
+[e =| _OPTION_REG -> -> 32 `i `Vuc ]
+"113
+[; ;TIMER.c: 113:      if(st_Timer_cfg->Timer_Prescaler == 1)
+[e $ ! == -> . *U _st_Timer_cfg 3 `i -> 1 `i 103  ]
+"114
+[; ;TIMER.c: 114:                     {
+{
+"116
+[; ;TIMER.c: 116:                         (OPTION_REG)|=(0x08);
+[e =| _OPTION_REG -> -> 8 `i `Vuc ]
+"117
+[; ;TIMER.c: 117:                     }
+}
+[e $U 104  ]
+"118
+[; ;TIMER.c: 118:                     else
+[e :U 103 ]
+"119
+[; ;TIMER.c: 119:                     {
+{
+"121
+[; ;TIMER.c: 121:                         (OPTION_REG)&=~(0x08);
+[e =& _OPTION_REG -> ~ -> 8 `i `Vuc ]
+"124
+[; ;TIMER.c: 124:                         (OPTION_REG)|=(au8_Timer0_PrescalerTable[st_Timer_cfg->Timer_Prescaler]) ;
+[e =| _OPTION_REG -> *U + &U _au8_Timer0_PrescalerTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_Timer0_PrescalerTable `ui `ux `Vuc ]
+"125
+[; ;TIMER.c: 125:                     }
+}
+[e :U 104 ]
+"126
+[; ;TIMER.c: 126:      break;
+[e $U 100  ]
+"128
+[; ;TIMER.c: 128:     case (1):
+[e :U 105 ]
+"130
+[; ;TIMER.c: 130:      (OPTION_REG)|=(0x20);
+[e =| _OPTION_REG -> -> 32 `i `Vuc ]
+"133
+[; ;TIMER.c: 133:                     (OPTION_REG)&=~(0x10);
+[e =& _OPTION_REG -> ~ -> 16 `i `Vuc ]
+"135
+[; ;TIMER.c: 135:      if(st_Timer_cfg->Timer_Prescaler == 1)
+[e $ ! == -> . *U _st_Timer_cfg 3 `i -> 1 `i 106  ]
+"136
+[; ;TIMER.c: 136:                     {
+{
+"138
+[; ;TIMER.c: 138:                         (OPTION_REG)|=(0x08);
+[e =| _OPTION_REG -> -> 8 `i `Vuc ]
+"139
+[; ;TIMER.c: 139:                     }
+}
+[e $U 107  ]
+"140
+[; ;TIMER.c: 140:                     else
+[e :U 106 ]
+"141
+[; ;TIMER.c: 141:                     {
+{
+"143
+[; ;TIMER.c: 143:                         (OPTION_REG)&=~(0x08);
+[e =& _OPTION_REG -> ~ -> 8 `i `Vuc ]
+"146
+[; ;TIMER.c: 146:                         (OPTION_REG)|=(au8_Timer0_PrescalerTable[st_Timer_cfg->Timer_Prescaler]) ;
+[e =| _OPTION_REG -> *U + &U _au8_Timer0_PrescalerTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_Timer0_PrescalerTable `ui `ux `Vuc ]
+"147
+[; ;TIMER.c: 147:                     }
+}
+[e :U 107 ]
+"148
+[; ;TIMER.c: 148:      break;
+[e $U 100  ]
+"150
+[; ;TIMER.c: 150:     case (2):
+[e :U 108 ]
+"152
+[; ;TIMER.c: 152:      (OPTION_REG)|=(0x20);
+[e =| _OPTION_REG -> -> 32 `i `Vuc ]
+"155
+[; ;TIMER.c: 155:                     (OPTION_REG)|=(0x10);
+[e =| _OPTION_REG -> -> 16 `i `Vuc ]
+"157
+[; ;TIMER.c: 157:      if(st_Timer_cfg->Timer_Prescaler == 1)
+[e $ ! == -> . *U _st_Timer_cfg 3 `i -> 1 `i 109  ]
+"158
+[; ;TIMER.c: 158:                     {
+{
+"160
+[; ;TIMER.c: 160:                         (OPTION_REG)|=(0x08);
+[e =| _OPTION_REG -> -> 8 `i `Vuc ]
+"161
+[; ;TIMER.c: 161:                     }
+}
+[e $U 110  ]
+"162
+[; ;TIMER.c: 162:                     else
+[e :U 109 ]
+"163
+[; ;TIMER.c: 163:                     {
+{
+"165
+[; ;TIMER.c: 165:                         (OPTION_REG)&=~(0x08);
+[e =& _OPTION_REG -> ~ -> 8 `i `Vuc ]
+"168
+[; ;TIMER.c: 168:                         (OPTION_REG)|=(au8_Timer0_PrescalerTable[st_Timer_cfg->Timer_Prescaler]) ;
+[e =| _OPTION_REG -> *U + &U _au8_Timer0_PrescalerTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_Timer0_PrescalerTable `ui `ux `Vuc ]
+"169
+[; ;TIMER.c: 169:                     }
+}
+[e :U 110 ]
+"170
+[; ;TIMER.c: 170:      break;
+[e $U 100  ]
+"171
+[; ;TIMER.c: 171:     default :
+[e :U 111 ]
+"172
+[; ;TIMER.c: 172:      break;
+[e $U 100  ]
+"173
+[; ;TIMER.c: 173:    }
+}
+[e $U 100  ]
+[e :U 101 ]
+[e [\ -> . *U _st_Timer_cfg 1 `i , $ -> 0 `i 102
+ , $ -> 1 `i 105
+ , $ -> 2 `i 108
+ 111 ]
+[e :U 100 ]
+"174
+[; ;TIMER.c: 174:    switch(st_Timer_cfg->Timer_Polling_Or_Interrupt)
+[e $U 113  ]
+"175
+[; ;TIMER.c: 175:    {
+{
+"176
+[; ;TIMER.c: 176:     case(1) :
+[e :U 114 ]
+"177
+[; ;TIMER.c: 177:                     (INTCON)|=(0x20);
+[e =| _INTCON -> -> 32 `i `Vuc ]
+"183
+[; ;TIMER.c: 183:      break;
+[e $U 112  ]
+"184
+[; ;TIMER.c: 184:     case(0) :
+[e :U 115 ]
+"185
+[; ;TIMER.c: 185:      (INTCON)&=~(0x20);
+[e =& _INTCON -> ~ -> 32 `i `Vuc ]
+"186
+[; ;TIMER.c: 186:      break;
+[e $U 112  ]
+"187
+[; ;TIMER.c: 187:     default :
+[e :U 116 ]
+"188
+[; ;TIMER.c: 188:      break;
+[e $U 112  ]
+"189
+[; ;TIMER.c: 189:    }
+}
+[e $U 112  ]
+[e :U 113 ]
+[e [\ -> . *U _st_Timer_cfg 2 `i , $ -> 1 `i 114
+ , $ -> 0 `i 115
+ 116 ]
+[e :U 112 ]
+"191
+[; ;TIMER.c: 191:    au8_PrescalerValue[0]=au8_PrescalerValueTable[st_Timer_cfg->Timer_Prescaler];
+[e = *U + &U _au8_PrescalerValue * -> -> -> 0 `i `ui `ux -> -> # *U &U _au8_PrescalerValue `ui `ux *U + &U _au8_PrescalerValueTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_PrescalerValueTable `ui `ux ]
+"192
+[; ;TIMER.c: 192:    break;
+[e $U 97  ]
+"194
+[; ;TIMER.c: 194:   case (1) :
+[e :U 117 ]
+"195
+[; ;TIMER.c: 195:    switch(st_Timer_cfg->Timer_Mode)
+[e $U 119  ]
+"196
+[; ;TIMER.c: 196:    {
+{
+"197
+[; ;TIMER.c: 197:     case(0):
+[e :U 120 ]
+"198
+[; ;TIMER.c: 198:       break;
+[e $U 118  ]
+"200
+[; ;TIMER.c: 200:     case (1):
+[e :U 121 ]
+"201
+[; ;TIMER.c: 201:     case (2):
+[e :U 122 ]
+"203
+[; ;TIMER.c: 203:                     (T1CON)|=(0x02);
+[e =| _T1CON -> -> 2 `i `Vuc ]
+"204
+[; ;TIMER.c: 204:      break;
+[e $U 118  ]
+"206
+[; ;TIMER.c: 206:                 default :
+[e :U 123 ]
+"207
+[; ;TIMER.c: 207:                     break;
+[e $U 118  ]
+"208
+[; ;TIMER.c: 208:    }
+}
+[e $U 118  ]
+[e :U 119 ]
+[e [\ -> . *U _st_Timer_cfg 1 `i , $ -> 0 `i 120
+ , $ -> 1 `i 121
+ , $ -> 2 `i 122
+ 123 ]
+[e :U 118 ]
+"210
+[; ;TIMER.c: 210:             switch(st_Timer_cfg->Timer_Polling_Or_Interrupt)
+[e $U 125  ]
+"211
+[; ;TIMER.c: 211:             {
+{
+"212
+[; ;TIMER.c: 212:                 case 1:
+[e :U 126 ]
+"213
+[; ;TIMER.c: 213:                     (PIE1)|=(0x01);
+[e =| _PIE1 -> -> 1 `i `Vuc ]
+"214
+[; ;TIMER.c: 214:                     if(((void *)0) != st_Timer_cfg->aptrf_INT)
+[e $ ! != -> -> -> 0 `i `*v `*F902 . *U _st_Timer_cfg 4 127  ]
+"215
+[; ;TIMER.c: 215:                     {
+{
+"217
+[; ;TIMER.c: 217:                         INT_SetCallBackFunc(1,&PIR1,0x01,st_Timer_cfg->aptrf_INT );
+[e ( _INT_SetCallBackFunc (4 , , , -> -> 1 `i `uc &U _PIR1 -> -> 1 `i `uc . *U _st_Timer_cfg 4 ]
+"218
+[; ;TIMER.c: 218:                     }
+}
+[e :U 127 ]
+"219
+[; ;TIMER.c: 219:                     break;
+[e $U 124  ]
+"221
+[; ;TIMER.c: 221:                 case 0:
+[e :U 128 ]
+"222
+[; ;TIMER.c: 222:                     (PIE1)&=~(0x01);
+[e =& _PIE1 -> ~ -> 1 `i `Vuc ]
+"223
+[; ;TIMER.c: 223:                     break;
+[e $U 124  ]
+"225
+[; ;TIMER.c: 225:             }
+}
+[e $U 124  ]
+[e :U 125 ]
+[e [\ -> . *U _st_Timer_cfg 2 `i , $ -> 1 `i 126
+ , $ -> 0 `i 128
+ 124 ]
+[e :U 124 ]
+"227
+[; ;TIMER.c: 227:    au8_PrescalerValue[1]=au8_PrescalerValueTable[st_Timer_cfg->Timer_Prescaler];
+[e = *U + &U _au8_PrescalerValue * -> -> -> 1 `i `ui `ux -> -> # *U &U _au8_PrescalerValue `ui `ux *U + &U _au8_PrescalerValueTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_PrescalerValueTable `ui `ux ]
+"230
+[; ;TIMER.c: 230:             (T1CON)|=(au8_Timer1_PrescalerTable[st_Timer_cfg->Timer_Prescaler]);
+[e =| _T1CON -> *U + &U _au8_Timer1_PrescalerTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_Timer1_PrescalerTable `ui `ux `Vuc ]
+"231
+[; ;TIMER.c: 231:    break;
+[e $U 97  ]
+"233
+[; ;TIMER.c: 233:   case (2) :
+[e :U 129 ]
+"234
+[; ;TIMER.c: 234:    switch(st_Timer_cfg->Timer_Mode)
+[e $U 131  ]
+"235
+[; ;TIMER.c: 235:    {
+{
+"236
+[; ;TIMER.c: 236:     case(0):
+[e :U 132 ]
+"237
+[; ;TIMER.c: 237:      break;
+[e $U 130  ]
+"238
+[; ;TIMER.c: 238:     default :
+[e :U 133 ]
+"239
+[; ;TIMER.c: 239:      break;
+[e $U 130  ]
+"240
+[; ;TIMER.c: 240:    }
+}
+[e $U 130  ]
+[e :U 131 ]
+[e [\ -> . *U _st_Timer_cfg 1 `i , $ -> 0 `i 132
+ 133 ]
+[e :U 130 ]
+"241
+[; ;TIMER.c: 241:             (T2CON)&=~(0xFF);
+[e =& _T2CON -> ~ -> 255 `i `Vuc ]
+"242
+[; ;TIMER.c: 242:             switch(st_Timer_cfg->Timer_Prescaler)
+[e $U 135  ]
+"243
+[; ;TIMER.c: 243:             {
+{
+"244
+[; ;TIMER.c: 244:                 case 1 :
+[e :U 136 ]
+"245
+[; ;TIMER.c: 245:                     break;
+[e $U 134  ]
+"246
+[; ;TIMER.c: 246:                 case 2 :
+[e :U 137 ]
+"247
+[; ;TIMER.c: 247:                     (T2CON)|=(0x08);
+[e =| _T2CON -> -> 8 `i `Vuc ]
+"248
+[; ;TIMER.c: 248:                     break;
+[e $U 134  ]
+"249
+[; ;TIMER.c: 249:                 case 3:
+[e :U 138 ]
+"250
+[; ;TIMER.c: 250:                     (T2CON)|=(0x01);
+[e =| _T2CON -> -> 1 `i `Vuc ]
+"251
+[; ;TIMER.c: 251:                     break;
+[e $U 134  ]
+"252
+[; ;TIMER.c: 252:                 case 4:
+[e :U 139 ]
+"253
+[; ;TIMER.c: 253:                     (T2CON)|=(0x08);
+[e =| _T2CON -> -> 8 `i `Vuc ]
+"254
+[; ;TIMER.c: 254:                     (T2CON)|=(0x01);
+[e =| _T2CON -> -> 1 `i `Vuc ]
+"255
+[; ;TIMER.c: 255:                     break;
+[e $U 134  ]
+"256
+[; ;TIMER.c: 256:                 case 5:
+[e :U 140 ]
+"257
+[; ;TIMER.c: 257:                     (T2CON)|=(0x02);
+[e =| _T2CON -> -> 2 `i `Vuc ]
+"258
+[; ;TIMER.c: 258:                     break;
+[e $U 134  ]
+"259
+[; ;TIMER.c: 259:                 case 6:
+[e :U 141 ]
+"260
+[; ;TIMER.c: 260:                     (T2CON)|=(0x08);
+[e =| _T2CON -> -> 8 `i `Vuc ]
+"261
+[; ;TIMER.c: 261:                     (T2CON)|=(0x02);
+[e =| _T2CON -> -> 2 `i `Vuc ]
+"262
+[; ;TIMER.c: 262:                     break;
+[e $U 134  ]
+"263
+[; ;TIMER.c: 263:                 case 7:
+[e :U 142 ]
+"264
+[; ;TIMER.c: 264:                     (T2CON)|=(0x18);
+[e =| _T2CON -> -> 24 `i `Vuc ]
+"265
+[; ;TIMER.c: 265:                     (T2CON)|=(0x02);
+[e =| _T2CON -> -> 2 `i `Vuc ]
+"266
+[; ;TIMER.c: 266:                     break;
+[e $U 134  ]
+"267
+[; ;TIMER.c: 267:                  case 8:
+[e :U 143 ]
+"268
+[; ;TIMER.c: 268:                     (T2CON)|=(0x38);
+[e =| _T2CON -> -> 56 `i `Vuc ]
+"269
+[; ;TIMER.c: 269:                     (T2CON)|=(0x02);
+[e =| _T2CON -> -> 2 `i `Vuc ]
+"270
+[; ;TIMER.c: 270:                     break;
+[e $U 134  ]
+"271
+[; ;TIMER.c: 271:                 case 9:
+[e :U 144 ]
+"272
+[; ;TIMER.c: 272:                     (T2CON)|=(0x78);
+[e =| _T2CON -> -> 120 `i `Vuc ]
+"273
+[; ;TIMER.c: 273:                     (T2CON)|=(0x02);
+[e =| _T2CON -> -> 2 `i `Vuc ]
+"274
+[; ;TIMER.c: 274:                     break;
+[e $U 134  ]
+"275
+[; ;TIMER.c: 275:            }
+}
+[e $U 134  ]
+[e :U 135 ]
+[e [\ -> . *U _st_Timer_cfg 3 `i , $ -> 1 `i 136
+ , $ -> 2 `i 137
+ , $ -> 3 `i 138
+ , $ -> 4 `i 139
+ , $ -> 5 `i 140
+ , $ -> 6 `i 141
+ , $ -> 7 `i 142
+ , $ -> 8 `i 143
+ , $ -> 9 `i 144
+ 134 ]
+[e :U 134 ]
+"277
+[; ;TIMER.c: 277:             switch(st_Timer_cfg->Timer_Polling_Or_Interrupt )
+[e $U 146  ]
+"278
+[; ;TIMER.c: 278:             {
+{
+"279
+[; ;TIMER.c: 279:                 case 1 :
+[e :U 147 ]
+"280
+[; ;TIMER.c: 280:                     (PIE1)|=(0x02);
+[e =| _PIE1 -> -> 2 `i `Vuc ]
+"281
+[; ;TIMER.c: 281:                     break;
+[e $U 145  ]
+"283
+[; ;TIMER.c: 283:                 case 0 :
+[e :U 148 ]
+"284
+[; ;TIMER.c: 284:                     (PIE1)&=~(0x02);
+[e =& _PIE1 -> ~ -> 2 `i `Vuc ]
+"285
+[; ;TIMER.c: 285:                      break;
+[e $U 145  ]
+"286
+[; ;TIMER.c: 286:                 default :
+[e :U 149 ]
+"287
+[; ;TIMER.c: 287:                     break;
+[e $U 145  ]
+"288
+[; ;TIMER.c: 288:             }
+}
+[e $U 145  ]
+[e :U 146 ]
+[e [\ -> . *U _st_Timer_cfg 2 `i , $ -> 1 `i 147
+ , $ -> 0 `i 148
+ 149 ]
+[e :U 145 ]
+"290
+[; ;TIMER.c: 290:    au8_PrescalerValue[2]=au8_PrescalerValueTable[st_Timer_cfg->Timer_Prescaler];
+[e = *U + &U _au8_PrescalerValue * -> -> -> 2 `i `ui `ux -> -> # *U &U _au8_PrescalerValue `ui `ux *U + &U _au8_PrescalerValueTable * -> . *U _st_Timer_cfg 3 `ux -> -> # *U &U _au8_PrescalerValueTable `ui `ux ]
+"291
+[; ;TIMER.c: 291:    break;
+[e $U 97  ]
+"293
+[; ;TIMER.c: 293:   default :
+[e :U 150 ]
+"294
+[; ;TIMER.c: 294:    break;
+[e $U 97  ]
+"296
+[; ;TIMER.c: 296:  }
+}
+[e $U 97  ]
+[e :U 98 ]
+[e [\ -> . *U _st_Timer_cfg 0 `i , $ -> 0 `i 99
+ , $ -> 1 `i 117
+ , $ -> 2 `i 129
+ 150 ]
+[e :U 97 ]
+"297
+[; ;TIMER.c: 297: }
+[e :UE 96 ]
+}
+"312
+[; ;TIMER.c: 312: void Timer_Start(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count)
+[v _Timer_Start `(v ~T0 @X0 1 ef2`uc`ui ]
+"313
+[; ;TIMER.c: 313: {
+{
+[e :U _Timer_Start ]
+"312
+[; ;TIMER.c: 312: void Timer_Start(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+[v _u16_Timer_Count `ui ~T0 @X0 1 r2 ]
+"313
+[; ;TIMER.c: 313: {
+[f ]
+"314
+[; ;TIMER.c: 314:  switch(u8_Timer_CH_NO)
+[e $U 153  ]
+"315
+[; ;TIMER.c: 315:  {
+{
+"316
+[; ;TIMER.c: 316:   case 0 :
+[e :U 154 ]
+"318
+[; ;TIMER.c: 318:    if(u16_Timer_Count > 255)
+[e $ ! > _u16_Timer_Count -> -> 255 `i `ui 155  ]
+"319
+[; ;TIMER.c: 319:    {
+{
+"321
+[; ;TIMER.c: 321:    }
+}
+[e $U 156  ]
+"322
+[; ;TIMER.c: 322:    else
+[e :U 155 ]
+"323
+[; ;TIMER.c: 323:    {
+{
+"325
+[; ;TIMER.c: 325:     au8_Timer_Started[0]=1;
+[e = *U + &U _au8_Timer_Started * -> -> -> 0 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 1 `i `uc ]
+"328
+[; ;TIMER.c: 328:                 u16_Timer_Count = 255 - u16_Timer_Count;
+[e = _u16_Timer_Count - -> -> 255 `i `ui _u16_Timer_Count ]
+"331
+[; ;TIMER.c: 331:                 TMR0 = u16_Timer_Count;
+[e = _TMR0 -> _u16_Timer_Count `uc ]
+"334
+[; ;TIMER.c: 334:     (OPTION_REG)&=~(0x20);
+[e =& _OPTION_REG -> ~ -> 32 `i `Vuc ]
+"335
+[; ;TIMER.c: 335:    }
+}
+[e :U 156 ]
+"336
+[; ;TIMER.c: 336:    break;
+[e $U 152  ]
+"338
+[; ;TIMER.c: 338:   case 1 :
+[e :U 157 ]
+"339
+[; ;TIMER.c: 339:    if(u16_Timer_Count > 65535)
+[e $ ! > -> _u16_Timer_Count `l -> 65535 `l 158  ]
+"340
+[; ;TIMER.c: 340:    {
+{
+"341
+[; ;TIMER.c: 341:    }
+}
+[e $U 159  ]
+"342
+[; ;TIMER.c: 342:    else
+[e :U 158 ]
+"343
+[; ;TIMER.c: 343:    {
+{
+"346
+[; ;TIMER.c: 346:                 u16_Timer_Count = 65535 - u16_Timer_Count;
+[e = _u16_Timer_Count -> - -> 65535 `l -> _u16_Timer_Count `l `ui ]
+"349
+[; ;TIMER.c: 349:                 TMR1L = u16_Timer_Count & 0x00FF;
+[e = _TMR1L -> & _u16_Timer_Count -> -> 255 `i `ui `uc ]
+"350
+[; ;TIMER.c: 350:                 TMR1H = (u16_Timer_Count & 0xFF00)>>8;
+[e = _TMR1H -> >> & _u16_Timer_Count -> 65280 `ui -> 8 `i `uc ]
+"353
+[; ;TIMER.c: 353:     au8_Timer_Started[1]=1;
+[e = *U + &U _au8_Timer_Started * -> -> -> 1 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 1 `i `uc ]
+"356
+[; ;TIMER.c: 356:                 (T1CON)|=(0x01);
+[e =| _T1CON -> -> 1 `i `Vuc ]
+"357
+[; ;TIMER.c: 357:    }
+}
+[e :U 159 ]
+"358
+[; ;TIMER.c: 358:    break;
+[e $U 152  ]
+"360
+[; ;TIMER.c: 360:   case 2 :
+[e :U 160 ]
+"361
+[; ;TIMER.c: 361:             u16_Timer_Count = 255 - u16_Timer_Count;
+[e = _u16_Timer_Count - -> -> 255 `i `ui _u16_Timer_Count ]
+"362
+[; ;TIMER.c: 362:    if(u16_Timer_Count > 255)
+[e $ ! > _u16_Timer_Count -> -> 255 `i `ui 161  ]
+"363
+[; ;TIMER.c: 363:    {
+{
+"365
+[; ;TIMER.c: 365:    }
+}
+[e $U 162  ]
+"366
+[; ;TIMER.c: 366:    else
+[e :U 161 ]
+"367
+[; ;TIMER.c: 367:    {
+{
+"368
+[; ;TIMER.c: 368:                 TMR2 = u16_Timer_Count;
+[e = _TMR2 -> _u16_Timer_Count `uc ]
+"369
+[; ;TIMER.c: 369:     au8_Timer_Started[2]=1;
+[e = *U + &U _au8_Timer_Started * -> -> -> 2 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 1 `i `uc ]
+"370
+[; ;TIMER.c: 370:                 (T2CON)|=(0x04);
+[e =| _T2CON -> -> 4 `i `Vuc ]
+"371
+[; ;TIMER.c: 371:    }
+}
+[e :U 162 ]
+"372
+[; ;TIMER.c: 372:    break;
+[e $U 152  ]
+"373
+[; ;TIMER.c: 373:   default:
+[e :U 163 ]
+"374
+[; ;TIMER.c: 374:    break;
+[e $U 152  ]
+"375
+[; ;TIMER.c: 375:  }
+}
+[e $U 152  ]
+[e :U 153 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 154
+ , $ -> 1 `i 157
+ , $ -> 2 `i 160
+ 163 ]
+[e :U 152 ]
+"376
+[; ;TIMER.c: 376: }
+[e :UE 151 ]
+}
+"388
+[; ;TIMER.c: 388: void Timer_Stop(uint8 u8_Timer_CH_NO)
+[v _Timer_Stop `(v ~T0 @X0 1 ef1`uc ]
+"389
+[; ;TIMER.c: 389: {
+{
+[e :U _Timer_Stop ]
+"388
+[; ;TIMER.c: 388: void Timer_Stop(uint8 u8_Timer_CH_NO)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+"389
+[; ;TIMER.c: 389: {
+[f ]
+"390
+[; ;TIMER.c: 390:  switch(u8_Timer_CH_NO)
+[e $U 166  ]
+"391
+[; ;TIMER.c: 391:  {
+{
+"392
+[; ;TIMER.c: 392:   case 0 :
+[e :U 167 ]
+"394
+[; ;TIMER.c: 394:    if(au8_Timer_Started[0] != 1)
+[e $ ! != -> *U + &U _au8_Timer_Started * -> -> -> 0 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux `i -> 1 `i 168  ]
+"395
+[; ;TIMER.c: 395:    {
+{
+"396
+[; ;TIMER.c: 396:    }
+}
+[e $U 169  ]
+"397
+[; ;TIMER.c: 397:    else
+[e :U 168 ]
+"398
+[; ;TIMER.c: 398:    {
+{
+"400
+[; ;TIMER.c: 400:                 (OPTION_REG)|=(0x20);
+[e =| _OPTION_REG -> -> 32 `i `Vuc ]
+"401
+[; ;TIMER.c: 401:     au8_Timer_Started[0]=0;
+[e = *U + &U _au8_Timer_Started * -> -> -> 0 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 0 `i `uc ]
+"402
+[; ;TIMER.c: 402:    }
+}
+[e :U 169 ]
+"403
+[; ;TIMER.c: 403:    break;
+[e $U 165  ]
+"404
+[; ;TIMER.c: 404:   case 1 :
+[e :U 170 ]
+"405
+[; ;TIMER.c: 405:    if(au8_Timer_Started[1] != 1)
+[e $ ! != -> *U + &U _au8_Timer_Started * -> -> -> 1 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux `i -> 1 `i 171  ]
+"406
+[; ;TIMER.c: 406:    {
+{
+"408
+[; ;TIMER.c: 408:    }
+}
+[e $U 172  ]
+"409
+[; ;TIMER.c: 409:    else
+[e :U 171 ]
+"410
+[; ;TIMER.c: 410:    {
+{
+"411
+[; ;TIMER.c: 411:     (T1CON)&=~(0x01);
+[e =& _T1CON -> ~ -> 1 `i `Vuc ]
+"412
+[; ;TIMER.c: 412:     au8_Timer_Started[1]=0;
+[e = *U + &U _au8_Timer_Started * -> -> -> 1 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 0 `i `uc ]
+"413
+[; ;TIMER.c: 413:    }
+}
+[e :U 172 ]
+"414
+[; ;TIMER.c: 414:    break;
+[e $U 165  ]
+"415
+[; ;TIMER.c: 415:   case 2 :
+[e :U 173 ]
+"416
+[; ;TIMER.c: 416:    if(au8_Timer_Started[2] != 1)
+[e $ ! != -> *U + &U _au8_Timer_Started * -> -> -> 2 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux `i -> 1 `i 174  ]
+"417
+[; ;TIMER.c: 417:    {
+{
+"418
+[; ;TIMER.c: 418:    }
+}
+[e $U 175  ]
+"419
+[; ;TIMER.c: 419:    else
+[e :U 174 ]
+"420
+[; ;TIMER.c: 420:    {
+{
+"421
+[; ;TIMER.c: 421:     (T1CON)&=~(0x04);
+[e =& _T1CON -> ~ -> 4 `i `Vuc ]
+"422
+[; ;TIMER.c: 422:     au8_Timer_Started[2]=0;
+[e = *U + &U _au8_Timer_Started * -> -> -> 2 `i `ui `ux -> -> # *U &U _au8_Timer_Started `ui `ux -> -> 0 `i `uc ]
+"423
+[; ;TIMER.c: 423:    }
+}
+[e :U 175 ]
+"424
+[; ;TIMER.c: 424:    break;
+[e $U 165  ]
+"425
+[; ;TIMER.c: 425:   default:
+[e :U 176 ]
+"426
+[; ;TIMER.c: 426:             break;
+[e $U 165  ]
+"427
+[; ;TIMER.c: 427:  }
+}
+[e $U 165  ]
+[e :U 166 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 167
+ , $ -> 1 `i 170
+ , $ -> 2 `i 173
+ 176 ]
+[e :U 165 ]
+"428
+[; ;TIMER.c: 428: }
+[e :UE 164 ]
+}
+"441
+[; ;TIMER.c: 441: void Timer_GetStatus(uint8 u8_Timer_CH_NO, bool* Data)
+[v _Timer_GetStatus `(v ~T0 @X0 1 ef2`uc`*uc ]
+"442
+[; ;TIMER.c: 442: {
+{
+[e :U _Timer_GetStatus ]
+"441
+[; ;TIMER.c: 441: void Timer_GetStatus(uint8 u8_Timer_CH_NO, bool* Data)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+[v _Data `*uc ~T0 @X0 1 r2 ]
+"442
+[; ;TIMER.c: 442: {
+[f ]
+"443
+[; ;TIMER.c: 443:  switch(u8_Timer_CH_NO)
+[e $U 179  ]
+"444
+[; ;TIMER.c: 444:  {
+{
+"445
+[; ;TIMER.c: 445:   case 0 :
+[e :U 180 ]
+"447
+[; ;TIMER.c: 447:    * Data = (((INTCON)&(0x04))/(0x04));
+[e = *U _Data -> / & -> _INTCON `i -> 4 `i -> 4 `i `uc ]
+"448
+[; ;TIMER.c: 448:    break;
+[e $U 178  ]
+"449
+[; ;TIMER.c: 449:   case 1 :
+[e :U 181 ]
+"450
+[; ;TIMER.c: 450:             * Data = (((PIR1)&(0x01))/(0x01));
+[e = *U _Data -> / & -> _PIR1 `i -> 1 `i -> 1 `i `uc ]
+"452
+[; ;TIMER.c: 452:    break;
+[e $U 178  ]
+"453
+[; ;TIMER.c: 453:   case 2 :
+[e :U 182 ]
+"454
+[; ;TIMER.c: 454:    * Data = (((PIR1)&(0x02))/(0x02));
+[e = *U _Data -> / & -> _PIR1 `i -> 2 `i -> 2 `i `uc ]
+"455
+[; ;TIMER.c: 455:    break;
+[e $U 178  ]
+"456
+[; ;TIMER.c: 456:   default :
+[e :U 183 ]
+"457
+[; ;TIMER.c: 457:             break;
+[e $U 178  ]
+"458
+[; ;TIMER.c: 458:  }
+}
+[e $U 178  ]
+[e :U 179 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 180
+ , $ -> 1 `i 181
+ , $ -> 2 `i 182
+ 183 ]
+[e :U 178 ]
+"459
+[; ;TIMER.c: 459:     if ((*Data) == 1)
+[e $ ! == -> *U _Data `i -> 1 `i 184  ]
+"460
+[; ;TIMER.c: 460:     {
+{
+"462
+[; ;TIMER.c: 462:         Timer_ClrStatus(u8_Timer_CH_NO);
+[e ( _Timer_ClrStatus (1 _u8_Timer_CH_NO ]
+"463
+[; ;TIMER.c: 463:     }
+}
+[e :U 184 ]
+"464
+[; ;TIMER.c: 464: }
+[e :UE 177 ]
+}
+"478
+[; ;TIMER.c: 478: void Timer_GetValue(uint8 u8_Timer_CH_NO, uint16* pu16_Data)
+[v _Timer_GetValue `(v ~T0 @X0 1 ef2`uc`*ui ]
+"479
+[; ;TIMER.c: 479: {
+{
+[e :U _Timer_GetValue ]
+"478
+[; ;TIMER.c: 478: void Timer_GetValue(uint8 u8_Timer_CH_NO, uint16* pu16_Data)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+[v _pu16_Data `*ui ~T0 @X0 1 r2 ]
+"479
+[; ;TIMER.c: 479: {
+[f ]
+"480
+[; ;TIMER.c: 480:     * pu16_Data =0;
+[e = *U _pu16_Data -> -> 0 `i `ui ]
+"481
+[; ;TIMER.c: 481:  switch(u8_Timer_CH_NO)
+[e $U 187  ]
+"482
+[; ;TIMER.c: 482:  {
+{
+"483
+[; ;TIMER.c: 483:   case 0 :
+[e :U 188 ]
+"484
+[; ;TIMER.c: 484:    * pu16_Data = TMR0;
+[e = *U _pu16_Data -> _TMR0 `ui ]
+"485
+[; ;TIMER.c: 485:    break;
+[e $U 186  ]
+"486
+[; ;TIMER.c: 486:   case 1 :
+[e :U 189 ]
+"487
+[; ;TIMER.c: 487:    * pu16_Data = TMR1L;
+[e = *U _pu16_Data -> _TMR1L `ui ]
+"488
+[; ;TIMER.c: 488:             * pu16_Data |= (TMR1H<<8);
+[e =| *U _pu16_Data -> << -> _TMR1H `i -> 8 `i `ui ]
+"489
+[; ;TIMER.c: 489:    break;
+[e $U 186  ]
+"490
+[; ;TIMER.c: 490:   case 2 :
+[e :U 190 ]
+"491
+[; ;TIMER.c: 491:    * pu16_Data = TMR2;
+[e = *U _pu16_Data -> _TMR2 `ui ]
+"492
+[; ;TIMER.c: 492:    break;
+[e $U 186  ]
+"493
+[; ;TIMER.c: 493:   default :
+[e :U 191 ]
+"494
+[; ;TIMER.c: 494:             break;
+[e $U 186  ]
+"495
+[; ;TIMER.c: 495:  }
+}
+[e $U 186  ]
+[e :U 187 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 188
+ , $ -> 1 `i 189
+ , $ -> 2 `i 190
+ 191 ]
+[e :U 186 ]
+"496
+[; ;TIMER.c: 496: }
+[e :UE 185 ]
+}
+"510
+[; ;TIMER.c: 510: void Timer_GetTickTime(uint8 u8_Timer_CH_NO,uint8 *pu8_Time)
+[v _Timer_GetTickTime `(v ~T0 @X0 1 ef2`uc`*uc ]
+"511
+[; ;TIMER.c: 511: {
+{
+[e :U _Timer_GetTickTime ]
+"510
+[; ;TIMER.c: 510: void Timer_GetTickTime(uint8 u8_Timer_CH_NO,uint8 *pu8_Time)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+[v _pu8_Time `*uc ~T0 @X0 1 r2 ]
+"511
+[; ;TIMER.c: 511: {
+[f ]
+"512
+[; ;TIMER.c: 512:  *pu8_Time = au8_PrescalerValue[u8_Timer_CH_NO]/8;
+[e = *U _pu8_Time -> / *U + &U _au8_PrescalerValue * -> _u8_Timer_CH_NO `ux -> -> # *U &U _au8_PrescalerValue `ui `ux -> -> 8 `i `ui `uc ]
+"513
+[; ;TIMER.c: 513: }
+[e :UE 192 ]
+}
+"527
+[; ;TIMER.c: 527: void Timer_SetValue(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count)
+[v _Timer_SetValue `(v ~T0 @X0 1 ef2`uc`ui ]
+"528
+[; ;TIMER.c: 528: {
+{
+[e :U _Timer_SetValue ]
+"527
+[; ;TIMER.c: 527: void Timer_SetValue(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+[v _u16_Timer_Count `ui ~T0 @X0 1 r2 ]
+"528
+[; ;TIMER.c: 528: {
+[f ]
+"529
+[; ;TIMER.c: 529:  switch(u8_Timer_CH_NO)
+[e $U 195  ]
+"530
+[; ;TIMER.c: 530:  {
+{
+"531
+[; ;TIMER.c: 531:   case 0 :
+[e :U 196 ]
+"533
+[; ;TIMER.c: 533:    if(u16_Timer_Count > 255)
+[e $ ! > _u16_Timer_Count -> -> 255 `i `ui 197  ]
+"534
+[; ;TIMER.c: 534:    {
+{
+"535
+[; ;TIMER.c: 535:    }
+}
+[e $U 198  ]
+"536
+[; ;TIMER.c: 536:    else
+[e :U 197 ]
+"537
+[; ;TIMER.c: 537:    {
+{
+"539
+[; ;TIMER.c: 539:                 u16_Timer_Count = 255 - u16_Timer_Count;
+[e = _u16_Timer_Count - -> -> 255 `i `ui _u16_Timer_Count ]
+"540
+[; ;TIMER.c: 540:     TMR0 = u16_Timer_Count;
+[e = _TMR0 -> _u16_Timer_Count `uc ]
+"541
+[; ;TIMER.c: 541:    }
+}
+[e :U 198 ]
+"542
+[; ;TIMER.c: 542:    break;
+[e $U 194  ]
+"544
+[; ;TIMER.c: 544:   case 1 :
+[e :U 199 ]
+"545
+[; ;TIMER.c: 545:    if(u16_Timer_Count > 65535)
+[e $ ! > -> _u16_Timer_Count `l -> 65535 `l 200  ]
+"546
+[; ;TIMER.c: 546:    {
+{
+"547
+[; ;TIMER.c: 547:    }
+}
+[e $U 201  ]
+"548
+[; ;TIMER.c: 548:    else
+[e :U 200 ]
+"549
+[; ;TIMER.c: 549:    {
+{
+"551
+[; ;TIMER.c: 551:                 u16_Timer_Count = 65535 - u16_Timer_Count;
+[e = _u16_Timer_Count -> - -> 65535 `l -> _u16_Timer_Count `l `ui ]
+"553
+[; ;TIMER.c: 553:                 TMR1L = u16_Timer_Count & 0x00FF;
+[e = _TMR1L -> & _u16_Timer_Count -> -> 255 `i `ui `uc ]
+"554
+[; ;TIMER.c: 554:                 TMR1H = (u16_Timer_Count & 0xFF00)>>8;
+[e = _TMR1H -> >> & _u16_Timer_Count -> 65280 `ui -> 8 `i `uc ]
+"555
+[; ;TIMER.c: 555:    }
+}
+[e :U 201 ]
+"556
+[; ;TIMER.c: 556:    break;
+[e $U 194  ]
+"558
+[; ;TIMER.c: 558:   case 2 :
+[e :U 202 ]
+"560
+[; ;TIMER.c: 560:    if(u16_Timer_Count > 255)
+[e $ ! > _u16_Timer_Count -> -> 255 `i `ui 203  ]
+"561
+[; ;TIMER.c: 561:    {
+{
+"563
+[; ;TIMER.c: 563:    }
+}
+[e $U 204  ]
+"564
+[; ;TIMER.c: 564:    else
+[e :U 203 ]
+"565
+[; ;TIMER.c: 565:    {
+{
+"566
+[; ;TIMER.c: 566:                 u16_Timer_Count = 255 - u16_Timer_Count;
+[e = _u16_Timer_Count - -> -> 255 `i `ui _u16_Timer_Count ]
+"567
+[; ;TIMER.c: 567:                 TMR2 = u16_Timer_Count;
+[e = _TMR2 -> _u16_Timer_Count `uc ]
+"568
+[; ;TIMER.c: 568:    }
+}
+[e :U 204 ]
+"569
+[; ;TIMER.c: 569:    break;
+[e $U 194  ]
+"570
+[; ;TIMER.c: 570:   default:
+[e :U 205 ]
+"571
+[; ;TIMER.c: 571:    break;
+[e $U 194  ]
+"572
+[; ;TIMER.c: 572:  }
+}
+[e $U 194  ]
+[e :U 195 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 196
+ , $ -> 1 `i 199
+ , $ -> 2 `i 202
+ 205 ]
+[e :U 194 ]
+"574
+[; ;TIMER.c: 574: }
+[e :UE 193 ]
+}
+"585
+[; ;TIMER.c: 585: void Timer_ClrStatus(uint8 u8_Timer_CH_NO)
+[v _Timer_ClrStatus `(v ~T0 @X0 1 ef1`uc ]
+"586
+[; ;TIMER.c: 586: {
+{
+[e :U _Timer_ClrStatus ]
+"585
+[; ;TIMER.c: 585: void Timer_ClrStatus(uint8 u8_Timer_CH_NO)
+[v _u8_Timer_CH_NO `uc ~T0 @X0 1 r1 ]
+"586
+[; ;TIMER.c: 586: {
+[f ]
+"587
+[; ;TIMER.c: 587:     switch (u8_Timer_CH_NO)
+[e $U 208  ]
+"588
+[; ;TIMER.c: 588:     {
+{
+"589
+[; ;TIMER.c: 589:         case 0:
+[e :U 209 ]
+"590
+[; ;TIMER.c: 590:             (INTCON)&=~(0x04);
+[e =& _INTCON -> ~ -> 4 `i `Vuc ]
+"591
+[; ;TIMER.c: 591:             break;
+[e $U 207  ]
+"593
+[; ;TIMER.c: 593:         case 1:
+[e :U 210 ]
+"594
+[; ;TIMER.c: 594:             (PIR1)&=~(0x01);
+[e =& _PIR1 -> ~ -> 1 `i `Vuc ]
+"595
+[; ;TIMER.c: 595:             break;
+[e $U 207  ]
+"597
+[; ;TIMER.c: 597:         case 2:
+[e :U 211 ]
+"598
+[; ;TIMER.c: 598:             (PIR1)&=~(0x02);
+[e =& _PIR1 -> ~ -> 2 `i `Vuc ]
+"599
+[; ;TIMER.c: 599:             break;
+[e $U 207  ]
+"601
+[; ;TIMER.c: 601:     }
+}
+[e $U 207  ]
+[e :U 208 ]
+[e [\ -> _u8_Timer_CH_NO `i , $ -> 0 `i 209
+ , $ -> 1 `i 210
+ , $ -> 2 `i 211
+ 207 ]
+[e :U 207 ]
+"602
+[; ;TIMER.c: 602: }
+[e :UE 206 ]
+}

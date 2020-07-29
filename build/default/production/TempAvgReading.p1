@@ -1,0 +1,162 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"39 ./LM35.h
+[; ;./LM35.h: 39: extern void LM_init(void);
+[v _LM_init `(v ~T0 @X0 0 ef ]
+"47
+[; ;./LM35.h: 47: extern void LM_Update(void);
+[v _LM_Update `(v ~T0 @X0 0 ef ]
+"59
+[; ;./LM35.h: 59: extern void LM_Read(uint8 *pu8_temperature);
+[v _LM_Read `(v ~T0 @X0 0 ef1`*uc ]
+"34 TempAvgReading.c
+[; ;TempAvgReading.c: 34: uint8 au8_TemperatureSamples[10]={0,0,0,0,0,0,0,0,0,0};
+[v _au8_TemperatureSamples `uc ~T0 @X0 -> 10 `i e ]
+[i _au8_TemperatureSamples
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+]
+"38
+[; ;TempAvgReading.c: 38: uint8 u8_TR_TickCounter=0;
+[v _u8_TR_TickCounter `uc ~T0 @X0 1 e ]
+[i _u8_TR_TickCounter
+-> -> 0 `i `uc
+]
+"52
+[; ;TempAvgReading.c: 52: extern void TemperatureAVGReading_init(void)
+[v _TemperatureAVGReading_init `(v ~T0 @X0 1 ef ]
+"53
+[; ;TempAvgReading.c: 53: {
+{
+[e :U _TemperatureAVGReading_init ]
+[f ]
+"54
+[; ;TempAvgReading.c: 54:     LM_init();
+[e ( _LM_init ..  ]
+"55
+[; ;TempAvgReading.c: 55: }
+[e :UE 1 ]
+}
+"64
+[; ;TempAvgReading.c: 64: extern void TemperatureAVGReading_Update(void)
+[v _TemperatureAVGReading_Update `(v ~T0 @X0 1 ef ]
+"65
+[; ;TempAvgReading.c: 65: {
+{
+[e :U _TemperatureAVGReading_Update ]
+[f ]
+"66
+[; ;TempAvgReading.c: 66:         u8_TR_TickCounter += 20;
+[e =+ _u8_TR_TickCounter -> -> 20 `i `uc ]
+"68
+[; ;TempAvgReading.c: 68:     if (u8_TR_TickCounter != 100){
+[e $ ! != -> _u8_TR_TickCounter `i -> 100 `i 3  ]
+{
+"69
+[; ;TempAvgReading.c: 69:         return;
+[e $UE 2  ]
+"70
+[; ;TempAvgReading.c: 70:     }
+}
+[e :U 3 ]
+"72
+[; ;TempAvgReading.c: 72:     u8_TR_TickCounter = 0 ;
+[e = _u8_TR_TickCounter -> -> 0 `i `uc ]
+"75
+[; ;TempAvgReading.c: 75:     uint8 u8_LMTemperature;
+[v _u8_LMTemperature `uc ~T0 @X0 1 a ]
+"76
+[; ;TempAvgReading.c: 76:     uint8 u8_LoopCounter;
+[v _u8_LoopCounter `uc ~T0 @X0 1 a ]
+"78
+[; ;TempAvgReading.c: 78:     LM_Update();
+[e ( _LM_Update ..  ]
+"79
+[; ;TempAvgReading.c: 79:     LM_Read(&u8_LMTemperature);
+[e ( _LM_Read (1 &U _u8_LMTemperature ]
+"81
+[; ;TempAvgReading.c: 81:     for(u8_LoopCounter=0;u8_LoopCounter < (10 -1);u8_LoopCounter++)
+{
+[e = _u8_LoopCounter -> -> 0 `i `uc ]
+[e $ < -> _u8_LoopCounter `i - -> 10 `i -> 1 `i 4  ]
+[e $U 5  ]
+[e :U 4 ]
+"82
+[; ;TempAvgReading.c: 82:     {
+{
+"83
+[; ;TempAvgReading.c: 83:         au8_TemperatureSamples[u8_LoopCounter] = au8_TemperatureSamples[(u8_LoopCounter+1)];
+[e = *U + &U _au8_TemperatureSamples * -> _u8_LoopCounter `ux -> -> # *U &U _au8_TemperatureSamples `ui `ux *U + &U _au8_TemperatureSamples * -> -> + -> _u8_LoopCounter `i -> 1 `i `ui `ux -> -> # *U &U _au8_TemperatureSamples `ui `ux ]
+"84
+[; ;TempAvgReading.c: 84:     }
+}
+[e ++ _u8_LoopCounter -> -> 1 `i `uc ]
+[e $ < -> _u8_LoopCounter `i - -> 10 `i -> 1 `i 4  ]
+[e :U 5 ]
+}
+"86
+[; ;TempAvgReading.c: 86:     au8_TemperatureSamples[9]=u8_LMTemperature;
+[e = *U + &U _au8_TemperatureSamples * -> -> -> 9 `i `ui `ux -> -> # *U &U _au8_TemperatureSamples `ui `ux _u8_LMTemperature ]
+"89
+[; ;TempAvgReading.c: 89: }
+[e :UE 2 ]
+}
+"101
+[; ;TempAvgReading.c: 101: extern void TemperatureAVGReading_Read(uint8 *pu8_AVGtemperature)
+[v _TemperatureAVGReading_Read `(v ~T0 @X0 1 ef1`*uc ]
+"102
+[; ;TempAvgReading.c: 102: {
+{
+[e :U _TemperatureAVGReading_Read ]
+"101
+[; ;TempAvgReading.c: 101: extern void TemperatureAVGReading_Read(uint8 *pu8_AVGtemperature)
+[v _pu8_AVGtemperature `*uc ~T0 @X0 1 r1 ]
+"102
+[; ;TempAvgReading.c: 102: {
+[f ]
+"103
+[; ;TempAvgReading.c: 103:     uint16 u16_CurrentAvgTemerature=0;
+[v _u16_CurrentAvgTemerature `ui ~T0 @X0 1 a ]
+[e = _u16_CurrentAvgTemerature -> -> 0 `i `ui ]
+"104
+[; ;TempAvgReading.c: 104:     uint8 u8_LoopCounter;
+[v _u8_LoopCounter `uc ~T0 @X0 1 a ]
+"105
+[; ;TempAvgReading.c: 105:     for(u8_LoopCounter=0;u8_LoopCounter < (10);u8_LoopCounter++)
+{
+[e = _u8_LoopCounter -> -> 0 `i `uc ]
+[e $ < -> _u8_LoopCounter `i -> 10 `i 8  ]
+[e $U 9  ]
+[e :U 8 ]
+"106
+[; ;TempAvgReading.c: 106:     {
+{
+"107
+[; ;TempAvgReading.c: 107:         u16_CurrentAvgTemerature += au8_TemperatureSamples[u8_LoopCounter];
+[e =+ _u16_CurrentAvgTemerature -> *U + &U _au8_TemperatureSamples * -> _u8_LoopCounter `ux -> -> # *U &U _au8_TemperatureSamples `ui `ux `ui ]
+"108
+[; ;TempAvgReading.c: 108:     }
+}
+[e ++ _u8_LoopCounter -> -> 1 `i `uc ]
+[e $ < -> _u8_LoopCounter `i -> 10 `i 8  ]
+[e :U 9 ]
+}
+"109
+[; ;TempAvgReading.c: 109:     u16_CurrentAvgTemerature /= 10;
+[e =/ _u16_CurrentAvgTemerature -> -> 10 `i `ui ]
+"111
+[; ;TempAvgReading.c: 111:     *pu8_AVGtemperature=u16_CurrentAvgTemerature;
+[e = *U _pu8_AVGtemperature -> _u16_CurrentAvgTemerature `uc ]
+"112
+[; ;TempAvgReading.c: 112: }
+[e :UE 7 ]
+}

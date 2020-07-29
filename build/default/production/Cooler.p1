@@ -1,0 +1,42 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"85 ./DIO.h
+[; ;./DIO.h: 85: void DIO_init(uint8 u8_port, uint8 u8_pins, uint8 u8_direction);
+[v _DIO_init `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"116
+[; ;./DIO.h: 116: void DIO_Write (uint8 u8_GPIO, uint8 u8_pins, uint8 u8_value);
+[v _DIO_Write `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"30 Cooler.c
+[; ;Cooler.c: 30: void Cooler_Init()
+[v _Cooler_Init `(v ~T0 @X0 1 ef ]
+"31
+[; ;Cooler.c: 31: {
+{
+[e :U _Cooler_Init ]
+[f ]
+"32
+[; ;Cooler.c: 32:     DIO_init(2,0x04,0x00);
+[e ( _DIO_init (3 , , -> -> 2 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc ]
+"33
+[; ;Cooler.c: 33: }
+[e :UE 1 ]
+}
+"41
+[; ;Cooler.c: 41: void Cooler_Turn(uint8 u8_State)
+[v _Cooler_Turn `(v ~T0 @X0 1 ef1`uc ]
+"42
+[; ;Cooler.c: 42: {
+{
+[e :U _Cooler_Turn ]
+"41
+[; ;Cooler.c: 41: void Cooler_Turn(uint8 u8_State)
+[v _u8_State `uc ~T0 @X0 1 r1 ]
+"42
+[; ;Cooler.c: 42: {
+[f ]
+"43
+[; ;Cooler.c: 43:     DIO_Write(2,0x04,u8_State);
+[e ( _DIO_Write (3 , , -> -> 2 `i `uc -> -> 4 `i `uc _u8_State ]
+"44
+[; ;Cooler.c: 44: }
+[e :UE 2 ]
+}

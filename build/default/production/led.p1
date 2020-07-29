@@ -1,0 +1,264 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"85 ./DIO.h
+[; ;./DIO.h: 85: void DIO_init(uint8 u8_port, uint8 u8_pins, uint8 u8_direction);
+[v _DIO_init `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"116
+[; ;./DIO.h: 116: void DIO_Write (uint8 u8_GPIO, uint8 u8_pins, uint8 u8_value);
+[v _DIO_Write `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"174
+[; ;./DIO.h: 174: void DIO_Toggle (uint8 u8_GPIO, uint8 u8_pins);
+[v _DIO_Toggle `(v ~T0 @X0 0 ef2`uc`uc ]
+"29 led.c
+[; ;led.c: 29: void Led_Init(uint8 u8_LED_ID){
+[v _Led_Init `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Led_Init ]
+[v _u8_LED_ID `uc ~T0 @X0 1 r1 ]
+[f ]
+"30
+[; ;led.c: 30:  switch(u8_LED_ID){
+[e $U 3  ]
+{
+"31
+[; ;led.c: 31:   case (0) :
+[e :U 4 ]
+"32
+[; ;led.c: 32:             DIO_init((1),(0x80),0x00);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+"33
+[; ;led.c: 33:    break;
+[e $U 2  ]
+"34
+[; ;led.c: 34:   case (1) :
+[e :U 5 ]
+"35
+[; ;led.c: 35:             DIO_init((1),(0x40),0x00);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 64 `i `uc -> -> 0 `i `uc ]
+"36
+[; ;led.c: 36:    break;
+[e $U 2  ]
+"37
+[; ;led.c: 37:   case (2) :
+[e :U 6 ]
+"38
+[; ;led.c: 38:             DIO_init((1),(0x20),0x00);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 32 `i `uc -> -> 0 `i `uc ]
+"39
+[; ;led.c: 39:    break;
+[e $U 2  ]
+"40
+[; ;led.c: 40:   case (3) :
+[e :U 7 ]
+"41
+[; ;led.c: 41:             DIO_init((1),(0x10),0x00);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 16 `i `uc -> -> 0 `i `uc ]
+"42
+[; ;led.c: 42:    break;
+[e $U 2  ]
+"43
+[; ;led.c: 43:   default:
+[e :U 8 ]
+"44
+[; ;led.c: 44:    break;
+[e $U 2  ]
+"45
+[; ;led.c: 45:  }
+}
+[e $U 2  ]
+[e :U 3 ]
+[e [\ -> _u8_LED_ID `i , $ -> 0 `i 4
+ , $ -> 1 `i 5
+ , $ -> 2 `i 6
+ , $ -> 3 `i 7
+ 8 ]
+[e :U 2 ]
+"46
+[; ;led.c: 46: }
+[e :UE 1 ]
+}
+"56
+[; ;led.c: 56: void Led_On(uint8 u8_led_ID){
+[v _Led_On `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Led_On ]
+[v _u8_led_ID `uc ~T0 @X0 1 r1 ]
+[f ]
+"57
+[; ;led.c: 57:  switch(u8_led_ID){
+[e $U 11  ]
+{
+"58
+[; ;led.c: 58:   case (0) :
+[e :U 12 ]
+"59
+[; ;led.c: 59:    DIO_Write((1), (0x80) , 0xFF);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 128 `i `uc -> -> 255 `i `uc ]
+"60
+[; ;led.c: 60:    break;
+[e $U 10  ]
+"61
+[; ;led.c: 61:   case (1) :
+[e :U 13 ]
+"62
+[; ;led.c: 62:    DIO_Write((1), (0x40) , 0xFF);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 64 `i `uc -> -> 255 `i `uc ]
+"63
+[; ;led.c: 63:    break;
+[e $U 10  ]
+"64
+[; ;led.c: 64:   case (2) :
+[e :U 14 ]
+"65
+[; ;led.c: 65:    DIO_Write((1), (0x20) , 0xFF);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 32 `i `uc -> -> 255 `i `uc ]
+"66
+[; ;led.c: 66:    break;
+[e $U 10  ]
+"67
+[; ;led.c: 67:   case (3) :
+[e :U 15 ]
+"68
+[; ;led.c: 68:    DIO_Write((1), (0x10) , 0xFF);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 16 `i `uc -> -> 255 `i `uc ]
+"69
+[; ;led.c: 69:    break;
+[e $U 10  ]
+"70
+[; ;led.c: 70:  }
+}
+[e $U 10  ]
+[e :U 11 ]
+[e [\ -> _u8_led_ID `i , $ -> 0 `i 12
+ , $ -> 1 `i 13
+ , $ -> 2 `i 14
+ , $ -> 3 `i 15
+ 10 ]
+[e :U 10 ]
+"71
+[; ;led.c: 71: }
+[e :UE 9 ]
+}
+"80
+[; ;led.c: 80: void Led_Off(uint8 u8_led_ID){
+[v _Led_Off `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Led_Off ]
+[v _u8_led_ID `uc ~T0 @X0 1 r1 ]
+[f ]
+"81
+[; ;led.c: 81:  switch(u8_led_ID){
+[e $U 18  ]
+{
+"82
+[; ;led.c: 82:   case (0) :
+[e :U 19 ]
+"83
+[; ;led.c: 83:    DIO_Write((1), (0x80) , 0);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 128 `i `uc -> -> 0 `i `uc ]
+"84
+[; ;led.c: 84:    break;
+[e $U 17  ]
+"85
+[; ;led.c: 85:   case (1) :
+[e :U 20 ]
+"86
+[; ;led.c: 86:    DIO_Write((1), (0x40) , 0);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 64 `i `uc -> -> 0 `i `uc ]
+"87
+[; ;led.c: 87:    break;
+[e $U 17  ]
+"88
+[; ;led.c: 88:   case (2) :
+[e :U 21 ]
+"89
+[; ;led.c: 89:    DIO_Write((1), (0x20) , 0);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 32 `i `uc -> -> 0 `i `uc ]
+"90
+[; ;led.c: 90:    break;
+[e $U 17  ]
+"91
+[; ;led.c: 91:   case (3) :
+[e :U 22 ]
+"92
+[; ;led.c: 92:    DIO_Write((1), (0x10) , 0);
+[e ( _DIO_Write (3 , , -> -> 1 `i `uc -> -> 16 `i `uc -> -> 0 `i `uc ]
+"93
+[; ;led.c: 93:    break;
+[e $U 17  ]
+"94
+[; ;led.c: 94:  }
+}
+[e $U 17  ]
+[e :U 18 ]
+[e [\ -> _u8_led_ID `i , $ -> 0 `i 19
+ , $ -> 1 `i 20
+ , $ -> 2 `i 21
+ , $ -> 3 `i 22
+ 17 ]
+[e :U 17 ]
+"95
+[; ;led.c: 95: }
+[e :UE 16 ]
+}
+"103
+[; ;led.c: 103: void Led_Toggle(uint8 u8_led_ID){
+[v _Led_Toggle `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _Led_Toggle ]
+[v _u8_led_ID `uc ~T0 @X0 1 r1 ]
+[f ]
+"104
+[; ;led.c: 104:  switch(u8_led_ID){
+[e $U 25  ]
+{
+"105
+[; ;led.c: 105:   case (0) :
+[e :U 26 ]
+"106
+[; ;led.c: 106:    DIO_Toggle((1), (0x80) );
+[e ( _DIO_Toggle (2 , -> -> 1 `i `uc -> -> 128 `i `uc ]
+"107
+[; ;led.c: 107:    break;
+[e $U 24  ]
+"108
+[; ;led.c: 108:   case (1) :
+[e :U 27 ]
+"109
+[; ;led.c: 109:    DIO_Toggle((1), (0x40) );
+[e ( _DIO_Toggle (2 , -> -> 1 `i `uc -> -> 64 `i `uc ]
+"110
+[; ;led.c: 110:    break;
+[e $U 24  ]
+"111
+[; ;led.c: 111:   case (2) :
+[e :U 28 ]
+"112
+[; ;led.c: 112:    DIO_Toggle((1), (0x20) );
+[e ( _DIO_Toggle (2 , -> -> 1 `i `uc -> -> 32 `i `uc ]
+"113
+[; ;led.c: 113:    break;
+[e $U 24  ]
+"114
+[; ;led.c: 114:   case (3) :
+[e :U 29 ]
+"115
+[; ;led.c: 115:    DIO_Toggle((1), (0x10) );
+[e ( _DIO_Toggle (2 , -> -> 1 `i `uc -> -> 16 `i `uc ]
+"116
+[; ;led.c: 116:    break;
+[e $U 24  ]
+"117
+[; ;led.c: 117:  }
+}
+[e $U 24  ]
+[e :U 25 ]
+[e [\ -> _u8_led_ID `i , $ -> 0 `i 26
+ , $ -> 1 `i 27
+ , $ -> 2 `i 28
+ , $ -> 3 `i 29
+ 24 ]
+[e :U 24 ]
+"118
+[; ;led.c: 118: }
+[e :UE 23 ]
+}

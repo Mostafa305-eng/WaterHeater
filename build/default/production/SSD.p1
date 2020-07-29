@@ -1,0 +1,522 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"30 SSD.c
+[; ;SSD.c: 30: typedef struct ST_SSD_t{
+[s S1 `uc 1 `uc 1 ]
+[n S1 ST_SSD_t u8_SSD_Data u8_SSD_State ]
+"85 ./DIO.h
+[; ;./DIO.h: 85: void DIO_init(uint8 u8_port, uint8 u8_pins, uint8 u8_direction);
+[v _DIO_init `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"116
+[; ;./DIO.h: 116: void DIO_Write (uint8 u8_GPIO, uint8 u8_pins, uint8 u8_value);
+[v _DIO_Write `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"191
+[; ;./DIO.h: 191: void DIO_PortWrite (uint8 u8_GPIO, uint8 u8_value);
+[v _DIO_PortWrite `(v ~T0 @X0 0 ef2`uc`uc ]
+"39 SSD.c
+[; ;SSD.c: 39: static ST_SSD_t astr_SSDs[]={ {0,0,},
+[v _astr_SSDs `S1 ~T0 @X0 -> 4 `i s ]
+[i _astr_SSDs
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+"45
+[; ;SSD.c: 45: static uint8 u8_SSD_Current=0;
+[v _u8_SSD_Current `uc ~T0 @X0 1 s ]
+[i _u8_SSD_Current
+-> -> 0 `i `uc
+]
+"48
+[; ;SSD.c: 48: static uint8 au8_SSD_DataMask[] =
+[v _au8_SSD_DataMask `uc ~T0 @X0 -> 10 `i s ]
+[i _au8_SSD_DataMask
+:U ..
+-> -> 63 `i `uc
+-> -> 6 `i `uc
+-> -> 91 `i `uc
+-> -> 79 `i `uc
+-> -> 102 `i `uc
+-> -> 109 `i `uc
+-> -> 125 `i `uc
+-> -> 7 `i `uc
+-> -> 127 `i `uc
+-> -> 111 `i `uc
+..
+]
+"63
+[; ;SSD.c: 63:  static uint8 u8_SSD_TickCounter = 0;
+[v _u8_SSD_TickCounter `uc ~T0 @X0 1 s ]
+[i _u8_SSD_TickCounter
+-> -> 0 `i `uc
+]
+"76
+[; ;SSD.c: 76: void SSD_Init(uint8 u8_SSD_ID)
+[v _SSD_Init `(v ~T0 @X0 1 ef1`uc ]
+"77
+[; ;SSD.c: 77: {
+{
+[e :U _SSD_Init ]
+"76
+[; ;SSD.c: 76: void SSD_Init(uint8 u8_SSD_ID)
+[v _u8_SSD_ID `uc ~T0 @X0 1 r1 ]
+"77
+[; ;SSD.c: 77: {
+[f ]
+"79
+[; ;SSD.c: 79:     u8_SSD_Current=0;
+[e = _u8_SSD_Current -> -> 0 `i `uc ]
+"80
+[; ;SSD.c: 80:     u8_SSD_TickCounter = 0;
+[e = _u8_SSD_TickCounter -> -> 0 `i `uc ]
+"82
+[; ;SSD.c: 82:     switch(u8_SSD_ID)
+[e $U 4  ]
+"83
+[; ;SSD.c: 83:     {
+{
+"84
+[; ;SSD.c: 84:         case 0 :
+[e :U 5 ]
+"85
+[; ;SSD.c: 85:             DIO_init(0,0x20,0x00);
+[e ( _DIO_init (3 , , -> -> 0 `i `uc -> -> 32 `i `uc -> -> 0 `i `uc ]
+"86
+[; ;SSD.c: 86:             break;
+[e $U 3  ]
+"87
+[; ;SSD.c: 87:         case 1 :
+[e :U 6 ]
+"88
+[; ;SSD.c: 88:             DIO_init(0,0x10,0x00);
+[e ( _DIO_init (3 , , -> -> 0 `i `uc -> -> 16 `i `uc -> -> 0 `i `uc ]
+"89
+[; ;SSD.c: 89:             break;
+[e $U 3  ]
+"90
+[; ;SSD.c: 90:         case 2 :
+[e :U 7 ]
+"91
+[; ;SSD.c: 91:             DIO_init(0,0x08,0x00);
+[e ( _DIO_init (3 , , -> -> 0 `i `uc -> -> 8 `i `uc -> -> 0 `i `uc ]
+"92
+[; ;SSD.c: 92:             break;
+[e $U 3  ]
+"93
+[; ;SSD.c: 93:         case 3 :
+[e :U 8 ]
+"94
+[; ;SSD.c: 94:             DIO_init(0,0x04,0x00);
+[e ( _DIO_init (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc ]
+"95
+[; ;SSD.c: 95:             break;
+[e $U 3  ]
+"96
+[; ;SSD.c: 96:         default :
+[e :U 9 ]
+"97
+[; ;SSD.c: 97:             break;
+[e $U 3  ]
+"98
+[; ;SSD.c: 98:     }
+}
+[e $U 3  ]
+[e :U 4 ]
+[e [\ -> _u8_SSD_ID `i , $ -> 0 `i 5
+ , $ -> 1 `i 6
+ , $ -> 2 `i 7
+ , $ -> 3 `i 8
+ 9 ]
+[e :U 3 ]
+"99
+[; ;SSD.c: 99:     DIO_init(3,0xFF,0x00);
+[e ( _DIO_init (3 , , -> -> 3 `i `uc -> -> 255 `i `uc -> -> 0 `i `uc ]
+"100
+[; ;SSD.c: 100: }
+[e :UE 2 ]
+}
+"110
+[; ;SSD.c: 110: void SSD_Update(void)
+[v _SSD_Update `(v ~T0 @X0 1 ef ]
+"111
+[; ;SSD.c: 111: {
+{
+[e :U _SSD_Update ]
+[f ]
+"114
+[; ;SSD.c: 114:     u8_SSD_TickCounter += 20;
+[e =+ _u8_SSD_TickCounter -> -> 20 `i `uc ]
+"116
+[; ;SSD.c: 116:     if (u8_SSD_TickCounter != 20){
+[e $ ! != -> _u8_SSD_TickCounter `i -> 20 `i 11  ]
+{
+"117
+[; ;SSD.c: 117:         return;
+[e $UE 10  ]
+"118
+[; ;SSD.c: 118:     }
+}
+[e :U 11 ]
+"120
+[; ;SSD.c: 120:     u8_SSD_TickCounter = 0 ;
+[e = _u8_SSD_TickCounter -> -> 0 `i `uc ]
+"123
+[; ;SSD.c: 123:     DIO_Write(0,0x20,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 32 `i `uc -> -> 0 `i `uc ]
+"124
+[; ;SSD.c: 124:     DIO_Write(0,0x10,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 16 `i `uc -> -> 0 `i `uc ]
+"125
+[; ;SSD.c: 125:     DIO_Write(0,0x08,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 8 `i `uc -> -> 0 `i `uc ]
+"126
+[; ;SSD.c: 126:     DIO_Write(0,0x04,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc ]
+"130
+[; ;SSD.c: 130:     if(astr_SSDs[u8_SSD_Current].u8_SSD_State == 1 )
+[e $ ! == -> . *U + &U _astr_SSDs * -> _u8_SSD_Current `ux -> -> # *U &U _astr_SSDs `ui `ux 1 `i -> 1 `i 12  ]
+"131
+[; ;SSD.c: 131:     {
+{
+"133
+[; ;SSD.c: 133:         switch(u8_SSD_Current)
+[e $U 14  ]
+"134
+[; ;SSD.c: 134:         {
+{
+"135
+[; ;SSD.c: 135:             case 0 :
+[e :U 15 ]
+"137
+[; ;SSD.c: 137:                 DIO_PortWrite (3, au8_SSD_DataMask [ astr_SSDs[u8_SSD_Current].u8_SSD_Data ] );
+[e ( _DIO_PortWrite (2 , -> -> 3 `i `uc *U + &U _au8_SSD_DataMask * -> . *U + &U _astr_SSDs * -> _u8_SSD_Current `ux -> -> # *U &U _astr_SSDs `ui `ux 0 `ux -> -> # *U &U _au8_SSD_DataMask `ui `ux ]
+"139
+[; ;SSD.c: 139:                 DIO_Write(0,0x20,0xFF);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 32 `i `uc -> -> 255 `i `uc ]
+"140
+[; ;SSD.c: 140:                 break;
+[e $U 13  ]
+"141
+[; ;SSD.c: 141:             case 1 :
+[e :U 16 ]
+"143
+[; ;SSD.c: 143:                 DIO_PortWrite (3, au8_SSD_DataMask [ astr_SSDs[u8_SSD_Current].u8_SSD_Data ] );
+[e ( _DIO_PortWrite (2 , -> -> 3 `i `uc *U + &U _au8_SSD_DataMask * -> . *U + &U _astr_SSDs * -> _u8_SSD_Current `ux -> -> # *U &U _astr_SSDs `ui `ux 0 `ux -> -> # *U &U _au8_SSD_DataMask `ui `ux ]
+"145
+[; ;SSD.c: 145:                 DIO_Write(0,0x10,0xFF);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 16 `i `uc -> -> 255 `i `uc ]
+"146
+[; ;SSD.c: 146:                 break;
+[e $U 13  ]
+"147
+[; ;SSD.c: 147:             case 2 :
+[e :U 17 ]
+"149
+[; ;SSD.c: 149:                 DIO_PortWrite (3, au8_SSD_DataMask [ astr_SSDs[u8_SSD_Current].u8_SSD_Data ] );
+[e ( _DIO_PortWrite (2 , -> -> 3 `i `uc *U + &U _au8_SSD_DataMask * -> . *U + &U _astr_SSDs * -> _u8_SSD_Current `ux -> -> # *U &U _astr_SSDs `ui `ux 0 `ux -> -> # *U &U _au8_SSD_DataMask `ui `ux ]
+"151
+[; ;SSD.c: 151:                 DIO_Write(0,0x08,0xFF);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 8 `i `uc -> -> 255 `i `uc ]
+"152
+[; ;SSD.c: 152:                 break;
+[e $U 13  ]
+"153
+[; ;SSD.c: 153:             case 3 :
+[e :U 18 ]
+"155
+[; ;SSD.c: 155:                 DIO_PortWrite (3, au8_SSD_DataMask [ astr_SSDs[u8_SSD_Current].u8_SSD_Data ] );
+[e ( _DIO_PortWrite (2 , -> -> 3 `i `uc *U + &U _au8_SSD_DataMask * -> . *U + &U _astr_SSDs * -> _u8_SSD_Current `ux -> -> # *U &U _astr_SSDs `ui `ux 0 `ux -> -> # *U &U _au8_SSD_DataMask `ui `ux ]
+"157
+[; ;SSD.c: 157:                 DIO_Write(0,0x04,0xFF);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> -> 255 `i `uc ]
+"158
+[; ;SSD.c: 158:                 break;
+[e $U 13  ]
+"159
+[; ;SSD.c: 159:             default :
+[e :U 19 ]
+"160
+[; ;SSD.c: 160:                 break;
+[e $U 13  ]
+"161
+[; ;SSD.c: 161:         }
+}
+[e $U 13  ]
+[e :U 14 ]
+[e [\ -> _u8_SSD_Current `i , $ -> 0 `i 15
+ , $ -> 1 `i 16
+ , $ -> 2 `i 17
+ , $ -> 3 `i 18
+ 19 ]
+[e :U 13 ]
+"162
+[; ;SSD.c: 162:     }
+}
+[e $U 20  ]
+"163
+[; ;SSD.c: 163:     else
+[e :U 12 ]
+"164
+[; ;SSD.c: 164:     {
+{
+"165
+[; ;SSD.c: 165:         DIO_Write(3,0xFF,0);
+[e ( _DIO_Write (3 , , -> -> 3 `i `uc -> -> 255 `i `uc -> -> 0 `i `uc ]
+"166
+[; ;SSD.c: 166:     }
+}
+[e :U 20 ]
+"169
+[; ;SSD.c: 169:     if(u8_SSD_Current == 1)
+[e $ ! == -> _u8_SSD_Current `i -> 1 `i 21  ]
+"170
+[; ;SSD.c: 170:     {
+{
+"171
+[; ;SSD.c: 171:         u8_SSD_Current=0;
+[e = _u8_SSD_Current -> -> 0 `i `uc ]
+"172
+[; ;SSD.c: 172:     }
+}
+[e $U 22  ]
+"173
+[; ;SSD.c: 173:     else
+[e :U 21 ]
+"174
+[; ;SSD.c: 174:     {
+{
+"175
+[; ;SSD.c: 175:         u8_SSD_Current++;
+[e ++ _u8_SSD_Current -> -> 1 `i `uc ]
+"176
+[; ;SSD.c: 176:     }
+}
+[e :U 22 ]
+"198
+[; ;SSD.c: 198: }
+[e :UE 10 ]
+}
+"211
+[; ;SSD.c: 211: void SSD_SetValue(uint8 u8_SSD_ID,uint8 u8_SSD_Data)
+[v _SSD_SetValue `(v ~T0 @X0 1 ef2`uc`uc ]
+"212
+[; ;SSD.c: 212: {
+{
+[e :U _SSD_SetValue ]
+"211
+[; ;SSD.c: 211: void SSD_SetValue(uint8 u8_SSD_ID,uint8 u8_SSD_Data)
+[v _u8_SSD_ID `uc ~T0 @X0 1 r1 ]
+[v _u8_SSD_Data `uc ~T0 @X0 1 r2 ]
+"212
+[; ;SSD.c: 212: {
+[f ]
+"213
+[; ;SSD.c: 213:     switch(u8_SSD_ID)
+[e $U 25  ]
+"214
+[; ;SSD.c: 214:     {
+{
+"215
+[; ;SSD.c: 215:         case 0 :
+[e :U 26 ]
+"216
+[; ;SSD.c: 216:             astr_SSDs[0].u8_SSD_Data = u8_SSD_Data ;
+[e = . *U + &U _astr_SSDs * -> -> -> 0 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 0 _u8_SSD_Data ]
+"217
+[; ;SSD.c: 217:             break;
+[e $U 24  ]
+"218
+[; ;SSD.c: 218:         case 1 :
+[e :U 27 ]
+"219
+[; ;SSD.c: 219:             astr_SSDs[1].u8_SSD_Data = u8_SSD_Data;
+[e = . *U + &U _astr_SSDs * -> -> -> 1 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 0 _u8_SSD_Data ]
+"220
+[; ;SSD.c: 220:             break;
+[e $U 24  ]
+"221
+[; ;SSD.c: 221:         case 2 :
+[e :U 28 ]
+"222
+[; ;SSD.c: 222:             astr_SSDs[2].u8_SSD_Data = u8_SSD_Data;
+[e = . *U + &U _astr_SSDs * -> -> -> 2 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 0 _u8_SSD_Data ]
+"223
+[; ;SSD.c: 223:             break;
+[e $U 24  ]
+"224
+[; ;SSD.c: 224:         case 3 :
+[e :U 29 ]
+"225
+[; ;SSD.c: 225:             astr_SSDs[3].u8_SSD_Data = u8_SSD_Data;
+[e = . *U + &U _astr_SSDs * -> -> -> 3 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 0 _u8_SSD_Data ]
+"226
+[; ;SSD.c: 226:             break;
+[e $U 24  ]
+"227
+[; ;SSD.c: 227:         default :
+[e :U 30 ]
+"228
+[; ;SSD.c: 228:             break;
+[e $U 24  ]
+"229
+[; ;SSD.c: 229:     }
+}
+[e $U 24  ]
+[e :U 25 ]
+[e [\ -> _u8_SSD_ID `i , $ -> 0 `i 26
+ , $ -> 1 `i 27
+ , $ -> 2 `i 28
+ , $ -> 3 `i 29
+ 30 ]
+[e :U 24 ]
+"230
+[; ;SSD.c: 230: }
+[e :UE 23 ]
+}
+"241
+[; ;SSD.c: 241: void SSD_SetState(uint8 u8_SSD_ID,uint8 u8_SSD_State)
+[v _SSD_SetState `(v ~T0 @X0 1 ef2`uc`uc ]
+"242
+[; ;SSD.c: 242: {
+{
+[e :U _SSD_SetState ]
+"241
+[; ;SSD.c: 241: void SSD_SetState(uint8 u8_SSD_ID,uint8 u8_SSD_State)
+[v _u8_SSD_ID `uc ~T0 @X0 1 r1 ]
+[v _u8_SSD_State `uc ~T0 @X0 1 r2 ]
+"242
+[; ;SSD.c: 242: {
+[f ]
+"243
+[; ;SSD.c: 243:     astr_SSDs[u8_SSD_ID].u8_SSD_State = u8_SSD_State;
+[e = . *U + &U _astr_SSDs * -> _u8_SSD_ID `ux -> -> # *U &U _astr_SSDs `ui `ux 1 _u8_SSD_State ]
+"244
+[; ;SSD.c: 244: }
+[e :UE 31 ]
+}
+"256
+[; ;SSD.c: 256: void SSD_GetState(uint8 u8_SSD_ID,uint8 * u8_SSD_State)
+[v _SSD_GetState `(v ~T0 @X0 1 ef2`uc`*uc ]
+"257
+[; ;SSD.c: 257: {
+{
+[e :U _SSD_GetState ]
+"256
+[; ;SSD.c: 256: void SSD_GetState(uint8 u8_SSD_ID,uint8 * u8_SSD_State)
+[v _u8_SSD_ID `uc ~T0 @X0 1 r1 ]
+[v _u8_SSD_State `*uc ~T0 @X0 1 r2 ]
+"257
+[; ;SSD.c: 257: {
+[f ]
+"258
+[; ;SSD.c: 258:     *u8_SSD_State = astr_SSDs[u8_SSD_ID].u8_SSD_State;
+[e = *U _u8_SSD_State . *U + &U _astr_SSDs * -> _u8_SSD_ID `ux -> -> # *U &U _astr_SSDs `ui `ux 1 ]
+"259
+[; ;SSD.c: 259: }
+[e :UE 32 ]
+}
+"270
+[; ;SSD.c: 270: void SSD_TurnOff(uint8 u8_SSD_ID)
+[v _SSD_TurnOff `(v ~T0 @X0 1 ef1`uc ]
+"271
+[; ;SSD.c: 271: {
+{
+[e :U _SSD_TurnOff ]
+"270
+[; ;SSD.c: 270: void SSD_TurnOff(uint8 u8_SSD_ID)
+[v _u8_SSD_ID `uc ~T0 @X0 1 r1 ]
+"271
+[; ;SSD.c: 271: {
+[f ]
+"272
+[; ;SSD.c: 272:     DIO_Write(3,0xFF,0);
+[e ( _DIO_Write (3 , , -> -> 3 `i `uc -> -> 255 `i `uc -> -> 0 `i `uc ]
+"273
+[; ;SSD.c: 273:     switch(u8_SSD_ID)
+[e $U 35  ]
+"274
+[; ;SSD.c: 274:     {
+{
+"275
+[; ;SSD.c: 275:         case 0 :
+[e :U 36 ]
+"276
+[; ;SSD.c: 276:             DIO_Write(0,0x20,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 32 `i `uc -> -> 0 `i `uc ]
+"277
+[; ;SSD.c: 277:             astr_SSDs[0].u8_SSD_State = 0 ;
+[e = . *U + &U _astr_SSDs * -> -> -> 0 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 1 -> -> 0 `i `uc ]
+"278
+[; ;SSD.c: 278:             break;
+[e $U 34  ]
+"279
+[; ;SSD.c: 279:         case 1 :
+[e :U 37 ]
+"280
+[; ;SSD.c: 280:             DIO_Write(0,0x10,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 16 `i `uc -> -> 0 `i `uc ]
+"281
+[; ;SSD.c: 281:             astr_SSDs[1].u8_SSD_State = 0;
+[e = . *U + &U _astr_SSDs * -> -> -> 1 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 1 -> -> 0 `i `uc ]
+"282
+[; ;SSD.c: 282:             break;
+[e $U 34  ]
+"283
+[; ;SSD.c: 283:         case 2 :
+[e :U 38 ]
+"284
+[; ;SSD.c: 284:             DIO_Write(0,0x08,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 8 `i `uc -> -> 0 `i `uc ]
+"285
+[; ;SSD.c: 285:             astr_SSDs[2].u8_SSD_State = 0;
+[e = . *U + &U _astr_SSDs * -> -> -> 2 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 1 -> -> 0 `i `uc ]
+"286
+[; ;SSD.c: 286:             break;
+[e $U 34  ]
+"287
+[; ;SSD.c: 287:         case 3 :
+[e :U 39 ]
+"288
+[; ;SSD.c: 288:             DIO_Write(0,0x04,0);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> -> 0 `i `uc ]
+"289
+[; ;SSD.c: 289:             astr_SSDs[3].u8_SSD_State = 0;
+[e = . *U + &U _astr_SSDs * -> -> -> 3 `i `ui `ux -> -> # *U &U _astr_SSDs `ui `ux 1 -> -> 0 `i `uc ]
+"290
+[; ;SSD.c: 290:             break;
+[e $U 34  ]
+"291
+[; ;SSD.c: 291:         default :
+[e :U 40 ]
+"292
+[; ;SSD.c: 292:             break;
+[e $U 34  ]
+"293
+[; ;SSD.c: 293:     }
+}
+[e $U 34  ]
+[e :U 35 ]
+[e [\ -> _u8_SSD_ID `i , $ -> 0 `i 36
+ , $ -> 1 `i 37
+ , $ -> 2 `i 38
+ , $ -> 3 `i 39
+ 40 ]
+[e :U 34 ]
+"294
+[; ;SSD.c: 294: }
+[e :UE 33 ]
+}

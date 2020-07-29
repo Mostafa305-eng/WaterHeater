@@ -1,0 +1,484 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F842 `(v ~T0 @X0 0 tf ]
+"34 ./ExternalInterrupt.h
+[; ;./ExternalInterrupt.h: 34: typedef struct ExternInt_Cfg_s{
+[s S95 `uc 1 `uc 1 `*F842 1 ]
+[n S95 ExternInt_Cfg_s ExternInt_No ExternInt_Event ExternInt_CBF_Ptr ]
+"1255 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1255: extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+[v _OPTION_REG `Vuc ~T0 @X0 0 e@129 ]
+[v F865 `(v ~T0 @X0 0 tf ]
+[v F857 `(v ~T0 @X0 0 tf ]
+"64 ./Interrupts.h
+[; ;./Interrupts.h: 64: void INT_SetCallBackFunc(uint8 u8_INT_Priority,volatile uint8 * pu8_Register,uint8 u8_MASK ,
+[v _INT_SetCallBackFunc `(v ~T0 @X0 0 ef4`uc`*Vuc`uc`*F857 ]
+"454 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 454: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
+[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
+[v F868 `(v ~T0 @X0 0 tf ]
+"54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"218
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 218: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"280
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 280: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"342
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 342: __asm("PORTD equ 08h");
+[; <" PORTD equ 08h ;# ">
+"404
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 404: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"436
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 436: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"456
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 456: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"534
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 534: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 596: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"636
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 636: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"643
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 643: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"650
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 650: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"657
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 657: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"732
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 732: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"739
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 739: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"810
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 810: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"817
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 817: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"887
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 887: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"894
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 894: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"901
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 901: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"908
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 908: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"966
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 966: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1061
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1061: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1068
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1068: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1075
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1075: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1082
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1082: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1089
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1089: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1096
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1096: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1154
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1154: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1161
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1161: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1257
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1257: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1327
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1327: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1377
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1377: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1439
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1439: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1501
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1501: __asm("TRISD equ 088h");
+[; <" TRISD equ 088h ;# ">
+"1563
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1563: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1620
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1620: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1682
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1682: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1722
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1722: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1756
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1756: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1818
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1818: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1825
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1825: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1832
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1832: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2001
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2001: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2082
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2082: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2089
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2089: __asm("CMCON equ 09Ch");
+[; <" CMCON equ 09Ch ;# ">
+"2159
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2159: __asm("CVRCON equ 09Dh");
+[; <" CVRCON equ 09Dh ;# ">
+"2224
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2224: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2231
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2231: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2290
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2290: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"2297
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2297: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"2304
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2304: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"2311
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2311: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"2318
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2318: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"2363
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"59 ExternalInterrupt.c
+[; ;ExternalInterrupt.c: 59: void ExternInt_Init(ExternInt_Cfg_s * pstr_ExternIntCfg)
+[v _ExternInt_Init `(v ~T0 @X0 1 ef1`*S95 ]
+"60
+[; ;ExternalInterrupt.c: 60: {
+{
+[e :U _ExternInt_Init ]
+"59
+[; ;ExternalInterrupt.c: 59: void ExternInt_Init(ExternInt_Cfg_s * pstr_ExternIntCfg)
+[v _pstr_ExternIntCfg `*S95 ~T0 @X0 1 r1 ]
+"60
+[; ;ExternalInterrupt.c: 60: {
+[f ]
+"61
+[; ;ExternalInterrupt.c: 61:  switch(pstr_ExternIntCfg->ExternInt_No)
+[e $U 98  ]
+"62
+[; ;ExternalInterrupt.c: 62:  {
+{
+"64
+[; ;ExternalInterrupt.c: 64:   case (0) :
+[e :U 99 ]
+"65
+[; ;ExternalInterrupt.c: 65:             (OPTION_REG)&=~(0x00);
+[e =& _OPTION_REG -> ~ -> 0 `i `Vuc ]
+"66
+[; ;ExternalInterrupt.c: 66:    switch (pstr_ExternIntCfg->ExternInt_Event)
+[e $U 101  ]
+"67
+[; ;ExternalInterrupt.c: 67:    {
+{
+"68
+[; ;ExternalInterrupt.c: 68:    case 2 :
+[e :U 102 ]
+"69
+[; ;ExternalInterrupt.c: 69:                 (OPTION_REG)|=(0x40);
+[e =| _OPTION_REG -> -> 64 `i `Vuc ]
+"70
+[; ;ExternalInterrupt.c: 70:     break;
+[e $U 100  ]
+"71
+[; ;ExternalInterrupt.c: 71:    case 3:
+[e :U 103 ]
+"72
+[; ;ExternalInterrupt.c: 72:                 (OPTION_REG)|=(0x40);
+[e =| _OPTION_REG -> -> 64 `i `Vuc ]
+"73
+[; ;ExternalInterrupt.c: 73:     break;
+[e $U 100  ]
+"74
+[; ;ExternalInterrupt.c: 74:    default:
+[e :U 104 ]
+"75
+[; ;ExternalInterrupt.c: 75:                 break;
+[e $U 100  ]
+"76
+[; ;ExternalInterrupt.c: 76:    }
+}
+[e $U 100  ]
+[e :U 101 ]
+[e [\ -> . *U _pstr_ExternIntCfg 1 `i , $ -> 2 `i 102
+ , $ -> 3 `i 103
+ 104 ]
+[e :U 100 ]
+"78
+[; ;ExternalInterrupt.c: 78:    if ( ((void *)0) != pstr_ExternIntCfg->ExternInt_CBF_Ptr)
+[e $ ! != -> -> -> 0 `i `*v `*F865 . *U _pstr_ExternIntCfg 2 105  ]
+"79
+[; ;ExternalInterrupt.c: 79:    {
+{
+"80
+[; ;ExternalInterrupt.c: 80:                 INT_SetCallBackFunc(0,&INTCON,0x02,pstr_ExternIntCfg->ExternInt_CBF_Ptr );
+[e ( _INT_SetCallBackFunc (4 , , , -> -> 0 `i `uc &U _INTCON -> -> 2 `i `uc . *U _pstr_ExternIntCfg 2 ]
+"81
+[; ;ExternalInterrupt.c: 81:    }
+}
+[e :U 105 ]
+"82
+[; ;ExternalInterrupt.c: 82:    break;
+[e $U 97  ]
+"83
+[; ;ExternalInterrupt.c: 83:   case (1) :
+[e :U 106 ]
+"85
+[; ;ExternalInterrupt.c: 85:    if ( ((void *)0) != pstr_ExternIntCfg->ExternInt_CBF_Ptr)
+[e $ ! != -> -> -> 0 `i `*v `*F868 . *U _pstr_ExternIntCfg 2 107  ]
+"86
+[; ;ExternalInterrupt.c: 86:    {
+{
+"88
+[; ;ExternalInterrupt.c: 88:    }
+}
+[e :U 107 ]
+"89
+[; ;ExternalInterrupt.c: 89:    break;
+[e $U 97  ]
+"90
+[; ;ExternalInterrupt.c: 90:   default:
+[e :U 108 ]
+"91
+[; ;ExternalInterrupt.c: 91:             break;
+[e $U 97  ]
+"92
+[; ;ExternalInterrupt.c: 92:  }
+}
+[e $U 97  ]
+[e :U 98 ]
+[e [\ -> . *U _pstr_ExternIntCfg 0 `i , $ -> 0 `i 99
+ , $ -> 1 `i 106
+ 108 ]
+[e :U 97 ]
+"93
+[; ;ExternalInterrupt.c: 93: }
+[e :UE 96 ]
+}
+"107
+[; ;ExternalInterrupt.c: 107: void ExternInt_SetEvent(uint8 u8_InterruptEvent)
+[v _ExternInt_SetEvent `(v ~T0 @X0 1 ef1`uc ]
+"108
+[; ;ExternalInterrupt.c: 108: {
+{
+[e :U _ExternInt_SetEvent ]
+"107
+[; ;ExternalInterrupt.c: 107: void ExternInt_SetEvent(uint8 u8_InterruptEvent)
+[v _u8_InterruptEvent `uc ~T0 @X0 1 r1 ]
+"108
+[; ;ExternalInterrupt.c: 108: {
+[f ]
+"109
+[; ;ExternalInterrupt.c: 109:     (OPTION_REG)&=~(0x00);
+[e =& _OPTION_REG -> ~ -> 0 `i `Vuc ]
+"110
+[; ;ExternalInterrupt.c: 110:     switch (u8_InterruptEvent)
+[e $U 111  ]
+"111
+[; ;ExternalInterrupt.c: 111:     {
+{
+"112
+[; ;ExternalInterrupt.c: 112:     case 2 :
+[e :U 112 ]
+"113
+[; ;ExternalInterrupt.c: 113:         (OPTION_REG)|=(0x40);
+[e =| _OPTION_REG -> -> 64 `i `Vuc ]
+"114
+[; ;ExternalInterrupt.c: 114:         break;
+[e $U 110  ]
+"115
+[; ;ExternalInterrupt.c: 115:     case 3:
+[e :U 113 ]
+"116
+[; ;ExternalInterrupt.c: 116:         (OPTION_REG)|=(0x40);
+[e =| _OPTION_REG -> -> 64 `i `Vuc ]
+"117
+[; ;ExternalInterrupt.c: 117:         break;
+[e $U 110  ]
+"118
+[; ;ExternalInterrupt.c: 118:     default:
+[e :U 114 ]
+"119
+[; ;ExternalInterrupt.c: 119:         break;
+[e $U 110  ]
+"120
+[; ;ExternalInterrupt.c: 120:     }
+}
+[e $U 110  ]
+[e :U 111 ]
+[e [\ -> _u8_InterruptEvent `i , $ -> 2 `i 112
+ , $ -> 3 `i 113
+ 114 ]
+[e :U 110 ]
+"122
+[; ;ExternalInterrupt.c: 122: }
+[e :UE 109 ]
+}
+"133
+[; ;ExternalInterrupt.c: 133: void ExternInt_Enable(uint8 u8_ExternInt_Type)
+[v _ExternInt_Enable `(v ~T0 @X0 1 ef1`uc ]
+"134
+[; ;ExternalInterrupt.c: 134: {
+{
+[e :U _ExternInt_Enable ]
+"133
+[; ;ExternalInterrupt.c: 133: void ExternInt_Enable(uint8 u8_ExternInt_Type)
+[v _u8_ExternInt_Type `uc ~T0 @X0 1 r1 ]
+"134
+[; ;ExternalInterrupt.c: 134: {
+[f ]
+"136
+[; ;ExternalInterrupt.c: 136:  switch (u8_ExternInt_Type)
+[e $U 117  ]
+"137
+[; ;ExternalInterrupt.c: 137:  {
+{
+"138
+[; ;ExternalInterrupt.c: 138:   case 0 :
+[e :U 118 ]
+"139
+[; ;ExternalInterrupt.c: 139:    (INTCON)|=(0x10);
+[e =| _INTCON -> -> 16 `i `Vuc ]
+"140
+[; ;ExternalInterrupt.c: 140:    break;
+[e $U 116  ]
+"141
+[; ;ExternalInterrupt.c: 141:   case 1 :
+[e :U 119 ]
+"142
+[; ;ExternalInterrupt.c: 142:    (INTCON)|=(0x08);
+[e =| _INTCON -> -> 8 `i `Vuc ]
+"143
+[; ;ExternalInterrupt.c: 143:    break;
+[e $U 116  ]
+"144
+[; ;ExternalInterrupt.c: 144:   default:
+[e :U 120 ]
+"145
+[; ;ExternalInterrupt.c: 145:    break;
+[e $U 116  ]
+"146
+[; ;ExternalInterrupt.c: 146:  }
+}
+[e $U 116  ]
+[e :U 117 ]
+[e [\ -> _u8_ExternInt_Type `i , $ -> 0 `i 118
+ , $ -> 1 `i 119
+ 120 ]
+[e :U 116 ]
+"147
+[; ;ExternalInterrupt.c: 147: }
+[e :UE 115 ]
+}
+"158
+[; ;ExternalInterrupt.c: 158: void ExternInt_Disable(uint8 u8_ExternInt_Type)
+[v _ExternInt_Disable `(v ~T0 @X0 1 ef1`uc ]
+"159
+[; ;ExternalInterrupt.c: 159: {
+{
+[e :U _ExternInt_Disable ]
+"158
+[; ;ExternalInterrupt.c: 158: void ExternInt_Disable(uint8 u8_ExternInt_Type)
+[v _u8_ExternInt_Type `uc ~T0 @X0 1 r1 ]
+"159
+[; ;ExternalInterrupt.c: 159: {
+[f ]
+"161
+[; ;ExternalInterrupt.c: 161:  switch (u8_ExternInt_Type)
+[e $U 123  ]
+"162
+[; ;ExternalInterrupt.c: 162:  {
+{
+"163
+[; ;ExternalInterrupt.c: 163:   case 0 :
+[e :U 124 ]
+"164
+[; ;ExternalInterrupt.c: 164:    (INTCON)&=~(0x10);
+[e =& _INTCON -> ~ -> 16 `i `Vuc ]
+"165
+[; ;ExternalInterrupt.c: 165:    break;
+[e $U 122  ]
+"166
+[; ;ExternalInterrupt.c: 166:   case 1 :
+[e :U 125 ]
+"167
+[; ;ExternalInterrupt.c: 167:    (INTCON)&=~(0x08);
+[e =& _INTCON -> ~ -> 8 `i `Vuc ]
+"168
+[; ;ExternalInterrupt.c: 168:    break;
+[e $U 122  ]
+"169
+[; ;ExternalInterrupt.c: 169:   default:
+[e :U 126 ]
+"170
+[; ;ExternalInterrupt.c: 170:    break;
+[e $U 122  ]
+"171
+[; ;ExternalInterrupt.c: 171:  }
+}
+[e $U 122  ]
+[e :U 123 ]
+[e [\ -> _u8_ExternInt_Type `i , $ -> 0 `i 124
+ , $ -> 1 `i 125
+ 126 ]
+[e :U 122 ]
+"172
+[; ;ExternalInterrupt.c: 172: }
+[e :UE 121 ]
+}

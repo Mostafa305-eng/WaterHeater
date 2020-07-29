@@ -1,0 +1,402 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"47 PushButton.c
+[; ;PushButton.c: 47: static ST_buttons_t STA_buttons[]={ {1,0x01,0x10,NotInit,{0xFF,0xFF}},
+[c E48 0 1 .. ]
+[n E48 EN_buttonInit_t Init NotInit  ]
+"35
+[; ;PushButton.c: 35: typedef struct ST_buttons_t{
+[s S1 `uc 1 `uc 1 `uc 1 `E48 1 `uc -> 2 `i ]
+[n S1 ST_buttons_t buttonGpio buttonBit buttonStatus buttonInit samples ]
+"85 ./DIO.h
+[; ;./DIO.h: 85: void DIO_init(uint8 u8_port, uint8 u8_pins, uint8 u8_direction);
+[v _DIO_init `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"147
+[; ;./DIO.h: 147: void DIO_Read (uint8 u8_GPIO,uint8 u8_pins, uint8 *pu8_data);
+[v _DIO_Read `(v ~T0 @X0 0 ef3`uc`uc`*uc ]
+"47 PushButton.c
+[; ;PushButton.c: 47: static ST_buttons_t STA_buttons[]={ {1,0x01,0x10,NotInit,{0xFF,0xFF}},
+[v _STA_buttons `S1 ~T0 @X0 -> 4 `i s ]
+[i _STA_buttons
+:U ..
+:U ..
+-> -> 1 `i `uc
+-> -> 1 `i `uc
+-> -> 16 `i `uc
+. `E48 1
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+:U ..
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 16 `i `uc
+. `E48 1
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+:U ..
+-> -> 1 `i `uc
+-> -> 4 `i `uc
+-> -> 16 `i `uc
+. `E48 1
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+. `E48 1
+:U ..
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+..
+..
+..
+]
+"54
+[; ;PushButton.c: 54:  static uint8 u8_PB_TickCounter = 0;
+[v _u8_PB_TickCounter `uc ~T0 @X0 1 s ]
+[i _u8_PB_TickCounter
+-> -> 0 `i `uc
+]
+"70
+[; ;PushButton.c: 70: void pushButton_Init(uint8 u8_PushbuttonID){
+[v _pushButton_Init `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _pushButton_Init ]
+[v _u8_PushbuttonID `uc ~T0 @X0 1 r1 ]
+[f ]
+"71
+[; ;PushButton.c: 71:     u8_PB_TickCounter = 0;
+[e = _u8_PB_TickCounter -> -> 0 `i `uc ]
+"72
+[; ;PushButton.c: 72:  switch(u8_PushbuttonID){
+[e $U 4  ]
+{
+"73
+[; ;PushButton.c: 73:   case (0) :
+[e :U 5 ]
+"74
+[; ;PushButton.c: 74:             DIO_init(1,0x01,0xFF);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 1 `i `uc -> -> 255 `i `uc ]
+"75
+[; ;PushButton.c: 75:    STA_buttons[0].buttonInit=Init;
+[e = . *U + &U _STA_buttons * -> -> -> 0 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 3 . `E48 0 ]
+"76
+[; ;PushButton.c: 76:    break;
+[e $U 3  ]
+"77
+[; ;PushButton.c: 77:   case (1) :
+[e :U 6 ]
+"78
+[; ;PushButton.c: 78:    DIO_init(1,0x02,0xFF);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 2 `i `uc -> -> 255 `i `uc ]
+"79
+[; ;PushButton.c: 79:    STA_buttons[1].buttonInit=Init;
+[e = . *U + &U _STA_buttons * -> -> -> 1 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 3 . `E48 0 ]
+"80
+[; ;PushButton.c: 80:    break;
+[e $U 3  ]
+"81
+[; ;PushButton.c: 81:   case (2) :
+[e :U 7 ]
+"82
+[; ;PushButton.c: 82:    DIO_init(1,0x04,0xFF);
+[e ( _DIO_init (3 , , -> -> 1 `i `uc -> -> 4 `i `uc -> -> 255 `i `uc ]
+"83
+[; ;PushButton.c: 83:             STA_buttons[2].buttonInit=Init;
+[e = . *U + &U _STA_buttons * -> -> -> 2 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 3 . `E48 0 ]
+"84
+[; ;PushButton.c: 84:    break;
+[e $U 3  ]
+"85
+[; ;PushButton.c: 85:   case (3) :
+[e :U 8 ]
+"86
+[; ;PushButton.c: 86:    DIO_init(0,0x08,0xFF);
+[e ( _DIO_init (3 , , -> -> 0 `i `uc -> -> 8 `i `uc -> -> 255 `i `uc ]
+"87
+[; ;PushButton.c: 87:    STA_buttons[3].buttonInit=Init;
+[e = . *U + &U _STA_buttons * -> -> -> 3 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 3 . `E48 0 ]
+"88
+[; ;PushButton.c: 88:    break;
+[e $U 3  ]
+"89
+[; ;PushButton.c: 89:  }
+}
+[e $U 3  ]
+[e :U 4 ]
+[e [\ -> _u8_PushbuttonID `i , $ -> 0 `i 5
+ , $ -> 1 `i 6
+ , $ -> 2 `i 7
+ , $ -> 3 `i 8
+ 3 ]
+[e :U 3 ]
+"91
+[; ;PushButton.c: 91: }
+[e :UE 2 ]
+}
+"100
+[; ;PushButton.c: 100: void pushButton_Update(void)
+[v _pushButton_Update `(v ~T0 @X0 1 ef ]
+"101
+[; ;PushButton.c: 101: {
+{
+[e :U _pushButton_Update ]
+[f ]
+"102
+[; ;PushButton.c: 102:     u8_PB_TickCounter += 20;
+[e =+ _u8_PB_TickCounter -> -> 20 `i `uc ]
+"104
+[; ;PushButton.c: 104:     if (u8_PB_TickCounter!= 20){
+[e $ ! != -> _u8_PB_TickCounter `i -> 20 `i 10  ]
+{
+"105
+[; ;PushButton.c: 105:         return;
+[e $UE 9  ]
+"106
+[; ;PushButton.c: 106:     }
+}
+[e :U 10 ]
+"108
+[; ;PushButton.c: 108:     u8_PB_TickCounter = 0 ;
+[e = _u8_PB_TickCounter -> -> 0 `i `uc ]
+"110
+[; ;PushButton.c: 110:  uint8 counter;
+[v _counter `uc ~T0 @X0 1 a ]
+"113
+[; ;PushButton.c: 113:     for (counter=0;counter<(3);counter++)
+{
+[e = _counter -> -> 0 `i `uc ]
+[e $ < -> _counter `i -> 3 `i 11  ]
+[e $U 12  ]
+[e :U 11 ]
+"114
+[; ;PushButton.c: 114:     {
+{
+"115
+[; ;PushButton.c: 115:         if((STA_buttons+counter)->buttonInit==Init)
+[e $ ! == -> . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 3 `ui -> . `E48 0 `ui 14  ]
+"116
+[; ;PushButton.c: 116:         {
+{
+"118
+[; ;PushButton.c: 118:         (STA_buttons+counter)->samples[0] = (STA_buttons+counter)->samples[1] ;
+[e = *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux ]
+"121
+[; ;PushButton.c: 121:             DIO_Read((STA_buttons+counter)->buttonGpio,(STA_buttons+counter)->buttonBit
+[e ( _DIO_Read (3 , , . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 0 . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 1 &U *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux ]
+"124
+[; ;PushButton.c: 124:             if ( (STA_buttons+counter)->samples[0] == (STA_buttons+counter)->samples[1] )
+[e $ ! == -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 0 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i 15  ]
+"125
+[; ;PushButton.c: 125:             {
+{
+"126
+[; ;PushButton.c: 126:                 switch ((STA_buttons+counter)->buttonStatus)
+[e $U 17  ]
+"127
+[; ;PushButton.c: 127:                 {
+{
+"128
+[; ;PushButton.c: 128:                     case 0x10 :
+[e :U 18 ]
+"129
+[; ;PushButton.c: 129:                         if((STA_buttons+counter)->samples[1] == 0 )
+[e $ ! == -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i -> 0 `i 19  ]
+"130
+[; ;PushButton.c: 130:                         {
+{
+"131
+[; ;PushButton.c: 131:                             (STA_buttons+counter)->buttonStatus=0x11;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 17 `i `uc ]
+"132
+[; ;PushButton.c: 132:                         }
+}
+[e $U 20  ]
+"133
+[; ;PushButton.c: 133:                         else
+[e :U 19 ]
+"134
+[; ;PushButton.c: 134:                         {
+{
+"136
+[; ;PushButton.c: 136:                         }
+}
+[e :U 20 ]
+"137
+[; ;PushButton.c: 137:                         break;
+[e $U 16  ]
+"139
+[; ;PushButton.c: 139:                     case 0x13 :
+[e :U 21 ]
+"140
+[; ;PushButton.c: 140:                         if((STA_buttons+counter)->samples[1] == 0)
+[e $ ! == -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i -> 0 `i 22  ]
+"141
+[; ;PushButton.c: 141:                         {
+{
+"142
+[; ;PushButton.c: 142:                             (STA_buttons+counter)->buttonStatus=0x11;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 17 `i `uc ]
+"143
+[; ;PushButton.c: 143:                         }
+}
+[e $U 23  ]
+"144
+[; ;PushButton.c: 144:                         else
+[e :U 22 ]
+"145
+[; ;PushButton.c: 145:                         {
+{
+"146
+[; ;PushButton.c: 146:                             (STA_buttons+counter)->buttonStatus=0x10;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 16 `i `uc ]
+"147
+[; ;PushButton.c: 147:                         }
+}
+[e :U 23 ]
+"148
+[; ;PushButton.c: 148:                         break;
+[e $U 16  ]
+"150
+[; ;PushButton.c: 150:                     case 0x11 :
+[e :U 24 ]
+"151
+[; ;PushButton.c: 151:                         if((STA_buttons+counter)->samples[1] == 0)
+[e $ ! == -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i -> 0 `i 25  ]
+"152
+[; ;PushButton.c: 152:                                 (STA_buttons+counter)->buttonStatus=0x12;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 18 `i `uc ]
+[e $U 26  ]
+"153
+[; ;PushButton.c: 153:                         else
+[e :U 25 ]
+"154
+[; ;PushButton.c: 154:                                 (STA_buttons+counter)->buttonStatus=0x13;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 19 `i `uc ]
+[e :U 26 ]
+"155
+[; ;PushButton.c: 155:                         break;
+[e $U 16  ]
+"157
+[; ;PushButton.c: 157:                     case 0x12 :
+[e :U 27 ]
+"158
+[; ;PushButton.c: 158:                         if((STA_buttons+counter)->samples[1] == 0xFF)
+[e $ ! == -> *U + &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 * -> -> -> 1 `i `ui `ux -> -> # *U &U . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 4 `ui `ux `i -> 255 `i 28  ]
+"159
+[; ;PushButton.c: 159:                             (STA_buttons+counter)->buttonStatus=0x13;
+[e = . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 -> -> 19 `i `uc ]
+[e :U 28 ]
+"160
+[; ;PushButton.c: 160:                         break;
+[e $U 16  ]
+"161
+[; ;PushButton.c: 161:                 }
+}
+[e $U 16  ]
+[e :U 17 ]
+[e [\ -> . *U + &U _STA_buttons * -> -> _counter `i `x -> -> # *U &U _STA_buttons `i `x 2 `i , $ -> 16 `i 18
+ , $ -> 19 `i 21
+ , $ -> 17 `i 24
+ , $ -> 18 `i 27
+ 16 ]
+[e :U 16 ]
+"162
+[; ;PushButton.c: 162:             }
+}
+[e :U 15 ]
+"163
+[; ;PushButton.c: 163:         }
+}
+[e :U 14 ]
+"164
+[; ;PushButton.c: 164:     }
+}
+[e ++ _counter -> -> 1 `i `uc ]
+[e $ < -> _counter `i -> 3 `i 11  ]
+[e :U 12 ]
+}
+"165
+[; ;PushButton.c: 165: }
+[e :UE 9 ]
+}
+"173
+[; ;PushButton.c: 173: void pushButton_GetStatus(uint8 u8_BtnId,uint8 * pu8_BtnState)
+[v _pushButton_GetStatus `(v ~T0 @X0 1 ef2`uc`*uc ]
+"174
+[; ;PushButton.c: 174: {
+{
+[e :U _pushButton_GetStatus ]
+"173
+[; ;PushButton.c: 173: void pushButton_GetStatus(uint8 u8_BtnId,uint8 * pu8_BtnState)
+[v _u8_BtnId `uc ~T0 @X0 1 r1 ]
+[v _pu8_BtnState `*uc ~T0 @X0 1 r2 ]
+"174
+[; ;PushButton.c: 174: {
+[f ]
+"175
+[; ;PushButton.c: 175:  switch (u8_BtnId)
+[e $U 31  ]
+"176
+[; ;PushButton.c: 176:  {
+{
+"177
+[; ;PushButton.c: 177:   case 0:
+[e :U 32 ]
+"178
+[; ;PushButton.c: 178:    *pu8_BtnState = STA_buttons[0].buttonStatus;
+[e = *U _pu8_BtnState . *U + &U _STA_buttons * -> -> -> 0 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 2 ]
+"179
+[; ;PushButton.c: 179:    break;
+[e $U 30  ]
+"180
+[; ;PushButton.c: 180:   case 1:
+[e :U 33 ]
+"181
+[; ;PushButton.c: 181:    *pu8_BtnState = STA_buttons[1].buttonStatus;
+[e = *U _pu8_BtnState . *U + &U _STA_buttons * -> -> -> 1 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 2 ]
+"182
+[; ;PushButton.c: 182:    break;
+[e $U 30  ]
+"183
+[; ;PushButton.c: 183:   case 2:
+[e :U 34 ]
+"184
+[; ;PushButton.c: 184:    *pu8_BtnState = STA_buttons[2].buttonStatus;
+[e = *U _pu8_BtnState . *U + &U _STA_buttons * -> -> -> 2 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 2 ]
+"185
+[; ;PushButton.c: 185:    break;
+[e $U 30  ]
+"186
+[; ;PushButton.c: 186:   case 3:
+[e :U 35 ]
+"187
+[; ;PushButton.c: 187:    *pu8_BtnState = STA_buttons[3].buttonStatus;
+[e = *U _pu8_BtnState . *U + &U _STA_buttons * -> -> -> 3 `i `ui `ux -> -> # *U &U _STA_buttons `ui `ux 2 ]
+"188
+[; ;PushButton.c: 188:    break;
+[e $U 30  ]
+"189
+[; ;PushButton.c: 189:  }
+}
+[e $U 30  ]
+[e :U 31 ]
+[e [\ -> _u8_BtnId `i , $ -> 0 `i 32
+ , $ -> 1 `i 33
+ , $ -> 2 `i 34
+ , $ -> 3 `i 35
+ 30 ]
+[e :U 30 ]
+"190
+[; ;PushButton.c: 190: }
+[e :UE 29 ]
+}

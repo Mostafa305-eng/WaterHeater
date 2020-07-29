@@ -1,0 +1,28 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"4 ./MainAppSW.h
+[; ;./MainAppSW.h: 4: void App_init();
+[v _App_init `(v ~T0 @X0 0 e? ]
+"6
+[; ;./MainAppSW.h: 6: void App_MainLoop();
+[v _App_MainLoop `(v ~T0 @X0 0 e? ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"11 main.c
+[; ;main.c: 11: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"13
+[; ;main.c: 13:     App_init();
+[e ( _App_init ..  ]
+"15
+[; ;main.c: 15:     App_MainLoop();
+[e ( _App_MainLoop ..  ]
+"17
+[; ;main.c: 17:     return;
+[e $UE 1  ]
+"18
+[; ;main.c: 18: }
+[e :UE 1 ]
+}

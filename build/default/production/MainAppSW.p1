@@ -1,0 +1,754 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"157 ./Timer.h
+[; ;./Timer.h: 157: void Timer_SetValue(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count);
+[v _Timer_SetValue `(v ~T0 @X0 0 ef2`uc`ui ]
+"93
+[; ;./Timer.h: 93: void Timer_Start(uint8 u8_Timer_CH_NO, uint16 u16_Timer_Count);
+[v _Timer_Start `(v ~T0 @X0 0 ef2`uc`ui ]
+"43 ./sleep.h
+[; ;./sleep.h: 43: void CPU_SetSleep(uint8 u8_SleepMode);
+[v _CPU_SetSleep `(v ~T0 @X0 0 ef1`uc ]
+"50 ./Heater.h
+[; ;./Heater.h: 50: void Heater_Turn(uint8 u8_State);
+[v _Heater_Turn `(v ~T0 @X0 0 ef1`uc ]
+"50 ./Cooler.h
+[; ;./Cooler.h: 50: void Cooler_Turn(uint8 u8_State);
+[v _Cooler_Turn `(v ~T0 @X0 0 ef1`uc ]
+"70 ./led.h
+[; ;./led.h: 70: void Led_Toggle(uint8 u8_led_ID);
+[v _Led_Toggle `(v ~T0 @X0 0 ef1`uc ]
+"52
+[; ;./led.h: 52: void Led_On(uint8 u8_led_ID);
+[v _Led_On `(v ~T0 @X0 0 ef1`uc ]
+"61
+[; ;./led.h: 61: void Led_Off(uint8 u8_led_ID);
+[v _Led_Off `(v ~T0 @X0 0 ef1`uc ]
+"38 ./PushButton.h
+[; ;./PushButton.h: 38: void pushButton_Init(uint8 u8_PushbuttonID);
+[v _pushButton_Init `(v ~T0 @X0 0 ef1`uc ]
+[v F126 `(v ~T0 @X0 0 tf ]
+"34 ./ExternalInterrupt.h
+[; ;./ExternalInterrupt.h: 34: typedef struct ExternInt_Cfg_s{
+[s S2 `uc 1 `uc 1 `*F126 1 ]
+[n S2 ExternInt_Cfg_s ExternInt_No ExternInt_Event ExternInt_CBF_Ptr ]
+[v F163 `(v ~T0 @X0 0 tf ]
+"57
+[; ;./ExternalInterrupt.h: 57: void ExternInt_Init(ExternInt_Cfg_s * pstr_ExternIntCfg);
+[v _ExternInt_Init `(v ~T0 @X0 0 ef1`*S2 ]
+"93
+[; ;./ExternalInterrupt.h: 93: void ExternInt_Enable(uint8 u8_ExternInt_Type);
+[v _ExternInt_Enable `(v ~T0 @X0 0 ef1`uc ]
+"34 ./TemperatureAvgReading.h
+[; ;./TemperatureAvgReading.h: 34: extern void TemperatureAVGReading_init(void);
+[v _TemperatureAVGReading_init `(v ~T0 @X0 0 ef ]
+"39 ./Display.h
+[; ;./Display.h: 39: void Display_Init(void);
+[v _Display_Init `(v ~T0 @X0 0 ef ]
+"41 ./Cooler.h
+[; ;./Cooler.h: 41: void Cooler_Init();
+[v _Cooler_Init `(v ~T0 @X0 0 e? ]
+"41 ./Heater.h
+[; ;./Heater.h: 41: void Heater_Init(void);
+[v _Heater_Init `(v ~T0 @X0 0 ef ]
+"44 ./led.h
+[; ;./led.h: 44: void Led_Init(uint8 u8_LED_ID);
+[v _Led_Init `(v ~T0 @X0 0 ef1`uc ]
+[v F72 `(v ~T0 @X0 0 tf ]
+"55 ./Timer.h
+[; ;./Timer.h: 55: {
+[s S1 `uc 1 `uc 1 `uc 1 `uc 1 `*F72 1 ]
+[n S1 str_Timer_cfg_t Timer_CH_NO Timer_Mode Timer_Polling_Or_Interrupt Timer_Prescaler aptrf_INT ]
+[v F167 `(v ~T0 @X0 0 tf ]
+"79
+[; ;./Timer.h: 79:  void Timer_Init(str_Timer_cfg_t * st_Timer_cfg);
+[v _Timer_Init `(v ~T0 @X0 0 ef1`*S1 ]
+"23 ./EEPROM.h
+[; ;./EEPROM.h: 23: void EEPROM_Init();
+[v _EEPROM_Init `(v ~T0 @X0 0 e? ]
+"42
+[; ;./EEPROM.h: 42: void EEPROM_Read(uint8 u8_Address,uint8 * pu8_Data);
+[v _EEPROM_Read `(v ~T0 @X0 0 ef2`uc`*uc ]
+"32
+[; ;./EEPROM.h: 32: void EEPROM_Write(uint8 u8_Address,uint8 u8_Data);
+[v _EEPROM_Write `(v ~T0 @X0 0 ef2`uc`uc ]
+"34 ./Interrupts.h
+[; ;./Interrupts.h: 34: void INT_SetEnable(void);
+[v _INT_SetEnable `(v ~T0 @X0 0 ef ]
+"55 ./PushButton.h
+[; ;./PushButton.h: 55: void pushButton_GetStatus(uint8 u8_BtnId,uint8 * pu8_BtnState);
+[v _pushButton_GetStatus `(v ~T0 @X0 0 ef2`uc`*uc ]
+"54 ./TemperatureAvgReading.h
+[; ;./TemperatureAvgReading.h: 54: extern void TemperatureAVGReading_Read(uint8 *pu8_AVGtemperature);
+[v _TemperatureAVGReading_Read `(v ~T0 @X0 0 ef1`*uc ]
+"59 ./LM35.h
+[; ;./LM35.h: 59: extern void LM_Read(uint8 *pu8_temperature);
+[v _LM_Read `(v ~T0 @X0 0 ef1`*uc ]
+"66 ./Display.h
+[; ;./Display.h: 66: void Display_TurnOff(void);
+[v _Display_TurnOff `(v ~T0 @X0 0 ef ]
+"105 ./Timer.h
+[; ;./Timer.h: 105: void Timer_Stop(uint8 u8_Timer_CH_NO);
+[v _Timer_Stop `(v ~T0 @X0 0 ef1`uc ]
+"58 ./Display.h
+[; ;./Display.h: 58: void Display_SetData(uint8 u8_DisplayData,uint8 u8_DisplayMode);
+[v _Display_SetData `(v ~T0 @X0 0 ef2`uc`uc ]
+"55 ./SSD.h
+[; ;./SSD.h: 55: void SSD_Update(void);
+[v _SSD_Update `(v ~T0 @X0 0 ef ]
+"46 ./PushButton.h
+[; ;./PushButton.h: 46: void pushButton_Update(void);
+[v _pushButton_Update `(v ~T0 @X0 0 ef ]
+"42 ./TemperatureAvgReading.h
+[; ;./TemperatureAvgReading.h: 42: extern void TemperatureAVGReading_Update(void);
+[v _TemperatureAVGReading_Update `(v ~T0 @X0 0 ef ]
+"47 ./Display.h
+[; ;./Display.h: 47: void Display_Update(void);
+[v _Display_Update `(v ~T0 @X0 0 ef ]
+"54 ./sleep.h
+[; ;./sleep.h: 54: void CPU_SleepUpdate();
+[v _CPU_SleepUpdate `(v ~T0 @X0 0 e? ]
+"15 ./Config.h
+[p x FOSC = HS ]
+"16
+[p x WDTE = OFF ]
+"17
+[p x PWRTE = OFF ]
+"18
+[p x BOREN = OFF ]
+"19
+[p x LVP = ON ]
+"20
+[p x CPD = OFF ]
+"21
+[p x WRT = OFF ]
+"22
+[p x CP = OFF ]
+"68 MainAppSW.c
+[; ;MainAppSW.c: 68: uint8 u8_WaterHeaterStatus=11;
+[v _u8_WaterHeaterStatus `uc ~T0 @X0 1 e ]
+[i _u8_WaterHeaterStatus
+-> -> 11 `i `uc
+]
+"69
+[; ;MainAppSW.c: 69: uint8 u8_MainLoopStatus=16;
+[v _u8_MainLoopStatus `uc ~T0 @X0 1 e ]
+[i _u8_MainLoopStatus
+-> -> 16 `i `uc
+]
+"70
+[; ;MainAppSW.c: 70: uint8 u8_APP_TickCounter=0;
+[v _u8_APP_TickCounter `uc ~T0 @X0 1 e ]
+[i _u8_APP_TickCounter
+-> -> 0 `i `uc
+]
+"71
+[; ;MainAppSW.c: 71: uint8 u8_SetTemperature;
+[v _u8_SetTemperature `uc ~T0 @X0 1 e ]
+"72
+[; ;MainAppSW.c: 72: uint8 u8_DisplayMode=2;
+[v _u8_DisplayMode `uc ~T0 @X0 1 e ]
+[i _u8_DisplayMode
+-> -> 2 `i `uc
+]
+"73
+[; ;MainAppSW.c: 73: uint16 u16_SettingModeCounter=0;
+[v _u16_SettingModeCounter `ui ~T0 @X0 1 e ]
+[i _u16_SettingModeCounter
+-> -> 0 `i `ui
+]
+"74
+[; ;MainAppSW.c: 74: uint8 u8_AVG_Temperature=0;
+[v _u8_AVG_Temperature `uc ~T0 @X0 1 e ]
+[i _u8_AVG_Temperature
+-> -> 0 `i `uc
+]
+"75
+[; ;MainAppSW.c: 75: uint16 u16_LED_Counter=0;
+[v _u16_LED_Counter `ui ~T0 @X0 1 e ]
+[i _u16_LED_Counter
+-> -> 0 `i `ui
+]
+"76
+[; ;MainAppSW.c: 76: uint8 u8_Heating_Element_Led_State=0;
+[v _u8_Heating_Element_Led_State `uc ~T0 @X0 1 e ]
+[i _u8_Heating_Element_Led_State
+-> -> 0 `i `uc
+]
+"90
+[; ;MainAppSW.c: 90: static void Timer_Callbk()
+[v _Timer_Callbk `(v ~T0 @X0 1 sf ]
+"91
+[; ;MainAppSW.c: 91: {
+{
+[e :U _Timer_Callbk ]
+[f ]
+"92
+[; ;MainAppSW.c: 92:     Timer_SetValue(1,5000);
+[e ( _Timer_SetValue (2 , -> -> 1 `i `uc -> -> 5000 `i `ui ]
+"93
+[; ;MainAppSW.c: 93:     u8_MainLoopStatus=15;
+[e = _u8_MainLoopStatus -> -> 15 `i `uc ]
+"94
+[; ;MainAppSW.c: 94: }
+[e :UE 3 ]
+}
+"99
+[; ;MainAppSW.c: 99: static void EXT_INT_Callbk()
+[v _EXT_INT_Callbk `(v ~T0 @X0 1 sf ]
+"100
+[; ;MainAppSW.c: 100: {
+{
+[e :U _EXT_INT_Callbk ]
+[f ]
+"101
+[; ;MainAppSW.c: 101:     if(u8_WaterHeaterStatus == 11)
+[e $ ! == -> _u8_WaterHeaterStatus `i -> 11 `i 5  ]
+"102
+[; ;MainAppSW.c: 102:     {
+{
+"103
+[; ;MainAppSW.c: 103:         u8_WaterHeaterStatus = 10;
+[e = _u8_WaterHeaterStatus -> -> 10 `i `uc ]
+"104
+[; ;MainAppSW.c: 104:         Timer_Start(1,5000);
+[e ( _Timer_Start (2 , -> -> 1 `i `uc -> -> 5000 `i `ui ]
+"105
+[; ;MainAppSW.c: 105:         CPU_SetSleep(25);
+[e ( _CPU_SetSleep (1 -> -> 25 `i `uc ]
+"106
+[; ;MainAppSW.c: 106:    }
+}
+[e $U 6  ]
+"107
+[; ;MainAppSW.c: 107:     else
+[e :U 5 ]
+"108
+[; ;MainAppSW.c: 108:     {
+{
+"109
+[; ;MainAppSW.c: 109:         u8_WaterHeaterStatus = 11;
+[e = _u8_WaterHeaterStatus -> -> 11 `i `uc ]
+"110
+[; ;MainAppSW.c: 110:     }
+}
+[e :U 6 ]
+"112
+[; ;MainAppSW.c: 112: }
+[e :UE 4 ]
+}
+"120
+[; ;MainAppSW.c: 120: static void Heater_Cooler_action(void)
+[v _Heater_Cooler_action `(v ~T0 @X0 1 sf ]
+"121
+[; ;MainAppSW.c: 121: {
+{
+[e :U _Heater_Cooler_action ]
+[f ]
+"122
+[; ;MainAppSW.c: 122:     if(u8_AVG_Temperature < (u8_SetTemperature-5))
+[e $ ! < -> _u8_AVG_Temperature `i - -> _u8_SetTemperature `i -> 5 `i 8  ]
+"123
+[; ;MainAppSW.c: 123:     {
+{
+"124
+[; ;MainAppSW.c: 124:         Heater_Turn(0xFF);
+[e ( _Heater_Turn (1 -> -> 255 `i `uc ]
+"125
+[; ;MainAppSW.c: 125:         Cooler_Turn(0);
+[e ( _Cooler_Turn (1 -> -> 0 `i `uc ]
+"126
+[; ;MainAppSW.c: 126:         u8_Heating_Element_Led_State=2;
+[e = _u8_Heating_Element_Led_State -> -> 2 `i `uc ]
+"127
+[; ;MainAppSW.c: 127:     }
+}
+[e $U 9  ]
+"128
+[; ;MainAppSW.c: 128:     else if (u8_AVG_Temperature > (u8_SetTemperature+5))
+[e :U 8 ]
+[e $ ! > -> _u8_AVG_Temperature `i + -> _u8_SetTemperature `i -> 5 `i 10  ]
+"129
+[; ;MainAppSW.c: 129:     {
+{
+"130
+[; ;MainAppSW.c: 130:         Heater_Turn(0);
+[e ( _Heater_Turn (1 -> -> 0 `i `uc ]
+"131
+[; ;MainAppSW.c: 131:         Cooler_Turn(0xFF);
+[e ( _Cooler_Turn (1 -> -> 255 `i `uc ]
+"132
+[; ;MainAppSW.c: 132:         u8_Heating_Element_Led_State=1;
+[e = _u8_Heating_Element_Led_State -> -> 1 `i `uc ]
+"133
+[; ;MainAppSW.c: 133:     }
+}
+[e :U 10 ]
+[e :U 9 ]
+"134
+[; ;MainAppSW.c: 134: }
+[e :UE 7 ]
+}
+"138
+[; ;MainAppSW.c: 138: static void LED_ACTION(void)
+[v _LED_ACTION `(v ~T0 @X0 1 sf ]
+"139
+[; ;MainAppSW.c: 139: {
+{
+[e :U _LED_ACTION ]
+[f ]
+"140
+[; ;MainAppSW.c: 140:     u16_LED_Counter += 20;
+[e =+ _u16_LED_Counter -> -> 20 `i `ui ]
+"141
+[; ;MainAppSW.c: 141:     if((u8_Heating_Element_Led_State == 2) && (u16_LED_Counter == 1000) )
+[e $ ! && == -> _u8_Heating_Element_Led_State `i -> 2 `i == _u16_LED_Counter -> -> 1000 `i `ui 12  ]
+"142
+[; ;MainAppSW.c: 142:     {
+{
+"143
+[; ;MainAppSW.c: 143:         Led_Toggle(0);
+[e ( _Led_Toggle (1 -> -> 0 `i `uc ]
+"144
+[; ;MainAppSW.c: 144:         u16_LED_Counter=0;
+[e = _u16_LED_Counter -> -> 0 `i `ui ]
+"145
+[; ;MainAppSW.c: 145:     }
+}
+[e $U 13  ]
+"146
+[; ;MainAppSW.c: 146:     else if(u8_Heating_Element_Led_State == 1)
+[e :U 12 ]
+[e $ ! == -> _u8_Heating_Element_Led_State `i -> 1 `i 14  ]
+"147
+[; ;MainAppSW.c: 147:     {
+{
+"148
+[; ;MainAppSW.c: 148:         Led_On(0);
+[e ( _Led_On (1 -> -> 0 `i `uc ]
+"149
+[; ;MainAppSW.c: 149:         u16_LED_Counter=0;
+[e = _u16_LED_Counter -> -> 0 `i `ui ]
+"150
+[; ;MainAppSW.c: 150:     }
+}
+[e $U 15  ]
+"151
+[; ;MainAppSW.c: 151:     else if(u8_Heating_Element_Led_State == 0)
+[e :U 14 ]
+[e $ ! == -> _u8_Heating_Element_Led_State `i -> 0 `i 16  ]
+"152
+[; ;MainAppSW.c: 152:     {
+{
+"153
+[; ;MainAppSW.c: 153:         Led_Off(0);
+[e ( _Led_Off (1 -> -> 0 `i `uc ]
+"154
+[; ;MainAppSW.c: 154:         u16_LED_Counter=0;
+[e = _u16_LED_Counter -> -> 0 `i `ui ]
+"155
+[; ;MainAppSW.c: 155:     }
+}
+[e :U 16 ]
+[e :U 15 ]
+[e :U 13 ]
+"157
+[; ;MainAppSW.c: 157: }
+[e :UE 11 ]
+}
+"160
+[; ;MainAppSW.c: 160: void App_init()
+[v _App_init `(v ~T0 @X0 1 ef ]
+"161
+[; ;MainAppSW.c: 161: {
+{
+[e :U _App_init ]
+[f ]
+"162
+[; ;MainAppSW.c: 162:     u8_WaterHeaterStatus=11;
+[e = _u8_WaterHeaterStatus -> -> 11 `i `uc ]
+"163
+[; ;MainAppSW.c: 163:     u8_MainLoopStatus=16;
+[e = _u8_MainLoopStatus -> -> 16 `i `uc ]
+"166
+[; ;MainAppSW.c: 166:     pushButton_Init(2);
+[e ( _pushButton_Init (1 -> -> 2 `i `uc ]
+"167
+[; ;MainAppSW.c: 167:     pushButton_Init(1);
+[e ( _pushButton_Init (1 -> -> 1 `i `uc ]
+[v F162 `S2 ~T0 @X0 1 s ]
+[i F162
+:U ..
+:U ..
+"169
+[; ;MainAppSW.c: 169:     ExternInt_Cfg_s zft={
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> &U _EXT_INT_Callbk `*F163
+..
+..
+]
+[v _zft `S2 ~T0 @X0 1 a ]
+[e = _zft F162 ]
+"175
+[; ;MainAppSW.c: 175:     ExternInt_Init(& zft);
+[e ( _ExternInt_Init (1 &U _zft ]
+"176
+[; ;MainAppSW.c: 176:     ExternInt_Enable(0);
+[e ( _ExternInt_Enable (1 -> -> 0 `i `uc ]
+"178
+[; ;MainAppSW.c: 178:     TemperatureAVGReading_init();
+[e ( _TemperatureAVGReading_init ..  ]
+"180
+[; ;MainAppSW.c: 180:     Display_Init();
+[e ( _Display_Init ..  ]
+"182
+[; ;MainAppSW.c: 182:     Cooler_Init();
+[e ( _Cooler_Init ..  ]
+"183
+[; ;MainAppSW.c: 183:     Heater_Init();
+[e ( _Heater_Init ..  ]
+"184
+[; ;MainAppSW.c: 184:     Led_Init(0);
+[e ( _Led_Init (1 -> -> 0 `i `uc ]
+[v F166 `S1 ~T0 @X0 1 s ]
+[i F166
+:U ..
+:U ..
+"187
+[; ;MainAppSW.c: 187:     str_Timer_cfg_t MyTimer={1,0,1,6,Timer_Callbk};
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 6 `i `uc
+-> &U _Timer_Callbk `*F167
+..
+..
+]
+[v _MyTimer `S1 ~T0 @X0 1 a ]
+[e = _MyTimer F166 ]
+"188
+[; ;MainAppSW.c: 188:     Timer_Init(&MyTimer);
+[e ( _Timer_Init (1 &U _MyTimer ]
+"190
+[; ;MainAppSW.c: 190:     u8_SetTemperature=60;
+[e = _u8_SetTemperature -> -> 60 `i `uc ]
+"191
+[; ;MainAppSW.c: 191:     uint8 temp;
+[v _temp `uc ~T0 @X0 1 a ]
+"192
+[; ;MainAppSW.c: 192:     EEPROM_Init();
+[e ( _EEPROM_Init ..  ]
+"193
+[; ;MainAppSW.c: 193:     EEPROM_Read(0x00,& temp);
+[e ( _EEPROM_Read (2 , -> -> 0 `i `uc &U _temp ]
+"195
+[; ;MainAppSW.c: 195:     if(temp != 0xAA)
+[e $ ! != -> _temp `i -> 170 `i 18  ]
+"196
+[; ;MainAppSW.c: 196:     {
+{
+"197
+[; ;MainAppSW.c: 197:         EEPROM_Write(0x00,0xAA);
+[e ( _EEPROM_Write (2 , -> -> 0 `i `uc -> -> 170 `i `uc ]
+"198
+[; ;MainAppSW.c: 198:         EEPROM_Write(0x01,60);
+[e ( _EEPROM_Write (2 , -> -> 1 `i `uc -> -> 60 `i `uc ]
+"199
+[; ;MainAppSW.c: 199:     }
+}
+[e $U 19  ]
+"200
+[; ;MainAppSW.c: 200:     else
+[e :U 18 ]
+"201
+[; ;MainAppSW.c: 201:     {
+{
+"202
+[; ;MainAppSW.c: 202:         EEPROM_Read(0x01,&u8_SetTemperature);
+[e ( _EEPROM_Read (2 , -> -> 1 `i `uc &U _u8_SetTemperature ]
+"203
+[; ;MainAppSW.c: 203:     }
+}
+[e :U 19 ]
+"205
+[; ;MainAppSW.c: 205:     INT_SetEnable();
+[e ( _INT_SetEnable ..  ]
+"208
+[; ;MainAppSW.c: 208:     CPU_SetSleep(20);
+[e ( _CPU_SetSleep (1 -> -> 20 `i `uc ]
+"209
+[; ;MainAppSW.c: 209: }
+[e :UE 17 ]
+}
+"212
+[; ;MainAppSW.c: 212: static void App_Update(void)
+[v _App_Update `(v ~T0 @X0 1 sf ]
+"213
+[; ;MainAppSW.c: 213: {
+{
+[e :U _App_Update ]
+[f ]
+"215
+[; ;MainAppSW.c: 215:     u8_APP_TickCounter += 20;
+[e =+ _u8_APP_TickCounter -> -> 20 `i `uc ]
+"217
+[; ;MainAppSW.c: 217:     if (u8_APP_TickCounter != 20){
+[e $ ! != -> _u8_APP_TickCounter `i -> 20 `i 21  ]
+{
+"218
+[; ;MainAppSW.c: 218:         return;
+[e $UE 20  ]
+"219
+[; ;MainAppSW.c: 219:     }
+}
+[e :U 21 ]
+"222
+[; ;MainAppSW.c: 222:     u8_APP_TickCounter=0;
+[e = _u8_APP_TickCounter -> -> 0 `i `uc ]
+"226
+[; ;MainAppSW.c: 226:     uint8 u8_BtnUpStatus=0;
+[v _u8_BtnUpStatus `uc ~T0 @X0 1 a ]
+[e = _u8_BtnUpStatus -> -> 0 `i `uc ]
+"227
+[; ;MainAppSW.c: 227:     uint8 u8_BtnDownStatus=0;
+[v _u8_BtnDownStatus `uc ~T0 @X0 1 a ]
+[e = _u8_BtnDownStatus -> -> 0 `i `uc ]
+"228
+[; ;MainAppSW.c: 228:     uint8 u8_CurrentTemperature;
+[v _u8_CurrentTemperature `uc ~T0 @X0 1 a ]
+"232
+[; ;MainAppSW.c: 232:     pushButton_GetStatus(2,&u8_BtnUpStatus);
+[e ( _pushButton_GetStatus (2 , -> -> 2 `i `uc &U _u8_BtnUpStatus ]
+"233
+[; ;MainAppSW.c: 233:     pushButton_GetStatus(1,&u8_BtnDownStatus);
+[e ( _pushButton_GetStatus (2 , -> -> 1 `i `uc &U _u8_BtnDownStatus ]
+"235
+[; ;MainAppSW.c: 235:     TemperatureAVGReading_Read(&u8_AVG_Temperature);
+[e ( _TemperatureAVGReading_Read (1 &U _u8_AVG_Temperature ]
+"237
+[; ;MainAppSW.c: 237:     LM_Read(&u8_CurrentTemperature);
+[e ( _LM_Read (1 &U _u8_CurrentTemperature ]
+"239
+[; ;MainAppSW.c: 239:     switch (u8_WaterHeaterStatus)
+[e $U 23  ]
+"240
+[; ;MainAppSW.c: 240:     {
+{
+"241
+[; ;MainAppSW.c: 241:         case 11 :
+[e :U 24 ]
+"242
+[; ;MainAppSW.c: 242:             Display_TurnOff();
+[e ( _Display_TurnOff ..  ]
+"243
+[; ;MainAppSW.c: 243:             Cooler_Turn(0);
+[e ( _Cooler_Turn (1 -> -> 0 `i `uc ]
+"244
+[; ;MainAppSW.c: 244:             Heater_Turn(0);
+[e ( _Heater_Turn (1 -> -> 0 `i `uc ]
+"245
+[; ;MainAppSW.c: 245:             u8_DisplayMode=2;
+[e = _u8_DisplayMode -> -> 2 `i `uc ]
+"246
+[; ;MainAppSW.c: 246:             u8_Heating_Element_Led_State = 0 ;
+[e = _u8_Heating_Element_Led_State -> -> 0 `i `uc ]
+"247
+[; ;MainAppSW.c: 247:             Timer_Stop(1);
+[e ( _Timer_Stop (1 -> -> 1 `i `uc ]
+"248
+[; ;MainAppSW.c: 248:             CPU_SetSleep(20);
+[e ( _CPU_SetSleep (1 -> -> 20 `i `uc ]
+"249
+[; ;MainAppSW.c: 249:             break;
+[e $U 22  ]
+"251
+[; ;MainAppSW.c: 251:         case 10 :
+[e :U 25 ]
+"252
+[; ;MainAppSW.c: 252:             Display_SetData(u8_CurrentTemperature,2);
+[e ( _Display_SetData (2 , _u8_CurrentTemperature -> -> 2 `i `uc ]
+"253
+[; ;MainAppSW.c: 253:             Heater_Cooler_action();
+[e ( _Heater_Cooler_action ..  ]
+"254
+[; ;MainAppSW.c: 254:             if(u8_BtnDownStatus == 0x11 || u8_BtnUpStatus == 0x11)
+[e $ ! || == -> _u8_BtnDownStatus `i -> 17 `i == -> _u8_BtnUpStatus `i -> 17 `i 26  ]
+"255
+[; ;MainAppSW.c: 255:             {
+{
+"256
+[; ;MainAppSW.c: 256:                 u8_WaterHeaterStatus = 12;
+[e = _u8_WaterHeaterStatus -> -> 12 `i `uc ]
+"257
+[; ;MainAppSW.c: 257:             }
+}
+[e :U 26 ]
+"258
+[; ;MainAppSW.c: 258:             break;
+[e $U 22  ]
+"260
+[; ;MainAppSW.c: 260:         case 12:
+[e :U 27 ]
+"261
+[; ;MainAppSW.c: 261:             Heater_Cooler_action();
+[e ( _Heater_Cooler_action ..  ]
+"262
+[; ;MainAppSW.c: 262:             u16_SettingModeCounter +=20;
+[e =+ _u16_SettingModeCounter -> -> 20 `i `ui ]
+"264
+[; ;MainAppSW.c: 264:             if(u8_BtnDownStatus == 0x11 )
+[e $ ! == -> _u8_BtnDownStatus `i -> 17 `i 28  ]
+"265
+[; ;MainAppSW.c: 265:             {
+{
+"266
+[; ;MainAppSW.c: 266:                 if(u8_SetTemperature >35)
+[e $ ! > -> _u8_SetTemperature `i -> 35 `i 29  ]
+"267
+[; ;MainAppSW.c: 267:                 {
+{
+"268
+[; ;MainAppSW.c: 268:                     u8_SetTemperature-=5;
+[e =- _u8_SetTemperature -> -> 5 `i `uc ]
+"269
+[; ;MainAppSW.c: 269:                 }
+}
+[e :U 29 ]
+"270
+[; ;MainAppSW.c: 270:                 u16_SettingModeCounter=0;
+[e = _u16_SettingModeCounter -> -> 0 `i `ui ]
+"271
+[; ;MainAppSW.c: 271:             }
+}
+[e $U 30  ]
+"272
+[; ;MainAppSW.c: 272:             else if(u8_BtnUpStatus == 0x11 )
+[e :U 28 ]
+[e $ ! == -> _u8_BtnUpStatus `i -> 17 `i 31  ]
+"273
+[; ;MainAppSW.c: 273:             {
+{
+"274
+[; ;MainAppSW.c: 274:                 if(u8_SetTemperature <75)
+[e $ ! < -> _u8_SetTemperature `i -> 75 `i 32  ]
+"275
+[; ;MainAppSW.c: 275:                 {
+{
+"276
+[; ;MainAppSW.c: 276:                     u8_SetTemperature+=5;
+[e =+ _u8_SetTemperature -> -> 5 `i `uc ]
+"277
+[; ;MainAppSW.c: 277:                 }
+}
+[e :U 32 ]
+"278
+[; ;MainAppSW.c: 278:                 u16_SettingModeCounter=0;
+[e = _u16_SettingModeCounter -> -> 0 `i `ui ]
+"279
+[; ;MainAppSW.c: 279:             }
+}
+[e :U 31 ]
+[e :U 30 ]
+"280
+[; ;MainAppSW.c: 280:             Display_SetData(u8_SetTemperature,1);
+[e ( _Display_SetData (2 , _u8_SetTemperature -> -> 1 `i `uc ]
+"281
+[; ;MainAppSW.c: 281:             if(u16_SettingModeCounter>=5000)
+[e $ ! >= _u16_SettingModeCounter -> -> 5000 `i `ui 33  ]
+"282
+[; ;MainAppSW.c: 282:             {
+{
+"283
+[; ;MainAppSW.c: 283:                 u8_WaterHeaterStatus = 10;
+[e = _u8_WaterHeaterStatus -> -> 10 `i `uc ]
+"284
+[; ;MainAppSW.c: 284:                 u16_SettingModeCounter=0;
+[e = _u16_SettingModeCounter -> -> 0 `i `ui ]
+"285
+[; ;MainAppSW.c: 285:                 EEPROM_Write(0x01,u8_SetTemperature);
+[e ( _EEPROM_Write (2 , -> -> 1 `i `uc _u8_SetTemperature ]
+"286
+[; ;MainAppSW.c: 286:             }
+}
+[e :U 33 ]
+"287
+[; ;MainAppSW.c: 287:             break;
+[e $U 22  ]
+"289
+[; ;MainAppSW.c: 289:         default:
+[e :U 34 ]
+"290
+[; ;MainAppSW.c: 290:             break;
+[e $U 22  ]
+"291
+[; ;MainAppSW.c: 291:     }
+}
+[e $U 22  ]
+[e :U 23 ]
+[e [\ -> _u8_WaterHeaterStatus `i , $ -> 11 `i 24
+ , $ -> 10 `i 25
+ , $ -> 12 `i 27
+ 34 ]
+[e :U 22 ]
+"294
+[; ;MainAppSW.c: 294:     LED_ACTION();
+[e ( _LED_ACTION ..  ]
+"296
+[; ;MainAppSW.c: 296: }
+[e :UE 20 ]
+}
+"302
+[; ;MainAppSW.c: 302: void App_MainLoop()
+[v _App_MainLoop `(v ~T0 @X0 1 ef ]
+"303
+[; ;MainAppSW.c: 303: {
+{
+[e :U _App_MainLoop ]
+[f ]
+"304
+[; ;MainAppSW.c: 304:     while(1)
+[e :U 37 ]
+"305
+[; ;MainAppSW.c: 305:     {
+{
+"306
+[; ;MainAppSW.c: 306:         if(u8_MainLoopStatus == 15 )
+[e $ ! == -> _u8_MainLoopStatus `i -> 15 `i 39  ]
+"307
+[; ;MainAppSW.c: 307:         {
+{
+"308
+[; ;MainAppSW.c: 308:             SSD_Update();
+[e ( _SSD_Update ..  ]
+"309
+[; ;MainAppSW.c: 309:             pushButton_Update();
+[e ( _pushButton_Update ..  ]
+"310
+[; ;MainAppSW.c: 310:             TemperatureAVGReading_Update();
+[e ( _TemperatureAVGReading_Update ..  ]
+"311
+[; ;MainAppSW.c: 311:             App_Update();
+[e ( _App_Update ..  ]
+"312
+[; ;MainAppSW.c: 312:             Display_Update();
+[e ( _Display_Update ..  ]
+"313
+[; ;MainAppSW.c: 313:             u8_MainLoopStatus=16;
+[e = _u8_MainLoopStatus -> -> 16 `i `uc ]
+"314
+[; ;MainAppSW.c: 314:             CPU_SleepUpdate();
+[e ( _CPU_SleepUpdate ..  ]
+"315
+[; ;MainAppSW.c: 315:         }
+}
+[e :U 39 ]
+"316
+[; ;MainAppSW.c: 316:     }
+}
+[e :U 36 ]
+[e $U 37  ]
+[e :U 38 ]
+"317
+[; ;MainAppSW.c: 317: }
+[e :UE 35 ]
+}

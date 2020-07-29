@@ -1,0 +1,92 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"115 ./ADC.h
+[; ;./ADC.h: 115: extern void ADC_ReadResult(uint16 *ptru16_Result);
+[v _ADC_ReadResult `(v ~T0 @X0 0 ef1`*ui ]
+[v F21 `(v ~T0 @X0 0 tf ]
+"88
+[; ;./ADC.h: 88: extern void ADC_init(uint8 u8_ADC_Channels_Config , uint8 u8_ADC_adjustResult , uint8 u8_ADC_Mode ,
+[v _ADC_init `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`*F21 ]
+[v F53 `(v ~T0 @X0 0 tf ]
+"116 ./DIO.h
+[; ;./DIO.h: 116: void DIO_Write (uint8 u8_GPIO, uint8 u8_pins, uint8 u8_value);
+[v _DIO_Write `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"100 ./ADC.h
+[; ;./ADC.h: 100: extern void ADC_startConversion(uint8 u8_channel);
+[v _ADC_startConversion `(v ~T0 @X0 0 ef1`uc ]
+"33 LM35.c
+[; ;LM35.c: 33: uint16 u16_ADCReading;
+[v _u16_ADCReading `ui ~T0 @X0 1 e ]
+"41
+[; ;LM35.c: 41: void LM_ReadingADC_CBK(void)
+[v _LM_ReadingADC_CBK `(v ~T0 @X0 1 ef ]
+"42
+[; ;LM35.c: 42: {
+{
+[e :U _LM_ReadingADC_CBK ]
+[f ]
+"43
+[; ;LM35.c: 43:  ADC_ReadResult(&u16_ADCReading);
+[e ( _ADC_ReadResult (1 &U _u16_ADCReading ]
+"44
+[; ;LM35.c: 44: }
+[e :UE 1 ]
+}
+"53
+[; ;LM35.c: 53: extern void LM_init(void)
+[v _LM_init `(v ~T0 @X0 1 ef ]
+"54
+[; ;LM35.c: 54: {
+{
+[e :U _LM_init ]
+[f ]
+"55
+[; ;LM35.c: 55:     ADC_init((0x00),(0x80),(0x00),(0x02),((void *)0));
+[e ( _ADC_init (4 , , , , -> -> 0 `i `uc -> -> 128 `i `uc -> -> 0 `i `uc -> -> 2 `i `uc -> -> -> 0 `i `*v `*F53 ]
+"62
+[; ;LM35.c: 62:     DIO_Write(0,0x04,0xFF);
+[e ( _DIO_Write (3 , , -> -> 0 `i `uc -> -> 4 `i `uc -> -> 255 `i `uc ]
+"67
+[; ;LM35.c: 67:  u16_ADCReading=0;
+[e = _u16_ADCReading -> -> 0 `i `ui ]
+"69
+[; ;LM35.c: 69: }
+[e :UE 2 ]
+}
+"77
+[; ;LM35.c: 77: extern void LM_Update(void)
+[v _LM_Update `(v ~T0 @X0 1 ef ]
+"78
+[; ;LM35.c: 78: {
+{
+[e :U _LM_Update ]
+[f ]
+"79
+[; ;LM35.c: 79:         ADC_startConversion((0x10));
+[e ( _ADC_startConversion (1 -> -> 16 `i `uc ]
+"80
+[; ;LM35.c: 80:         ADC_ReadResult(&u16_ADCReading);
+[e ( _ADC_ReadResult (1 &U _u16_ADCReading ]
+"81
+[; ;LM35.c: 81: }
+[e :UE 3 ]
+}
+"91
+[; ;LM35.c: 91: extern void LM_Read(uint8 *pu8_temperature)
+[v _LM_Read `(v ~T0 @X0 1 ef1`*uc ]
+"92
+[; ;LM35.c: 92: {
+{
+[e :U _LM_Read ]
+"91
+[; ;LM35.c: 91: extern void LM_Read(uint8 *pu8_temperature)
+[v _pu8_temperature `*uc ~T0 @X0 1 r1 ]
+"92
+[; ;LM35.c: 92: {
+[f ]
+"93
+[; ;LM35.c: 93:  *pu8_temperature = (u16_ADCReading * 4.88/10);
+[e = *U _pu8_temperature -> / * -> _u16_ADCReading `d .4.88 -> -> 10 `i `d `uc ]
+"96
+[; ;LM35.c: 96: }
+[e :UE 4 ]
+}
