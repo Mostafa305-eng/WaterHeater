@@ -166,13 +166,13 @@ void App_init()
     pushButton_Init(UP_BUTTON);
     pushButton_Init(DOWN_BUTTON);
 
-    ExternInt_Cfg_s zft={
+    ExternInt_Cfg_s PB_ext_Int={
         EXTERN_INT_RB0,
         FALLING_EDGE,
         EXT_INT_Callbk,
     };
     
-    ExternInt_Init(& zft);
+    ExternInt_Init(& PB_ext_Int);
     ExternInt_Enable(EXTERN_INT_RB0);
 
     TemperatureAVGReading_init();

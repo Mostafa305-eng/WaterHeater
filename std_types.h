@@ -22,8 +22,7 @@ typedef signed char sint8;
 typedef signed int sint16;
 typedef signed long int sint32;
 //typedef signed long long sint64;
-typedef volatile uint8* const reg_type8;
-typedef volatile uint16* const reg_type16;
+typedef volatile uint32* const reg_type;
 typedef float float32;
 
 typedef void(*Ptrfunc) (void) ;
