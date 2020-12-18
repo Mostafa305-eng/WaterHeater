@@ -69,7 +69,7 @@ uint8 u8_WaterHeaterStatus=WATER_HEATER_OFF;
 uint8 u8_MainLoopStatus=MAIN_LOOP_STOPPPED;
 uint8 u8_APP_TickCounter=0;
 uint8 u8_SetTemperature;
-uint8 u8_DisplayMode=CONTINUOUS_DISPLAY;
+
 uint16  u16_SettingModeCounter=0;
 uint8 u8_AVG_Temperature=0;
 uint16 u16_LED_Counter=0;
@@ -242,7 +242,6 @@ static void App_Update(void)
             Display_TurnOff();
             Cooler_Turn(COOLER_OFF);
             Heater_Turn(HEATER_OFF);
-            u8_DisplayMode=CONTINUOUS_DISPLAY;
             u8_Heating_Element_Led_State = LED_OFF ;
             Timer_Stop(TIMER_CH1);
             CPU_SetSleep(CPU_SLEEP);
